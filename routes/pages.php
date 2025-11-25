@@ -8,7 +8,7 @@ use App\Http\Controllers\BlogController;
 
 /************************ Pages Routes Start ******************************/
 Route::group(['middleware'=>'auth'],function(){
-    Route::group(['prefix'=>'{language}'],function(){
+    Route::group(['prefix'=>'{language?}'],function(){
         Route::group(['prefix'=>'pages','as'=>'pages.'],function(){    
             Route::get('setting',[PageController::class,'setting'])->name('setting');
             Route::get('gallery/gallery1',[PageController::class,'gallery1'])->name('gallery1');

@@ -12,7 +12,7 @@ use App\Http\Controllers\MapController;
 
 /************************ Feature Routes Start ******************************/
 Route::group(['middleware'=>'auth'],function(){
-    Route::group(['prefix'=>'{language}'],function(){        
+    Route::group(['prefix'=>'{language?}'],function(){        
         Route::group(['prefix'=>'chart','as'=>'chart.'],function(){    
             Route::get('chartjs',[ChartController::class,'index'])->name('chartjs');
             Route::get('google',[ChartController::class,'google'])->name('google');

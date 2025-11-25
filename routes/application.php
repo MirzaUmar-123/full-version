@@ -21,7 +21,7 @@ use App\Http\Controllers\JobController;
 
 /************************ Application Routes Start ******************************/
 Route::group(['middleware'=>'auth'],function(){
-    Route::group(['prefix'=>'{language}'],function(){
+    Route::group(['prefix'=>'{language?}'],function(){
         Route::group(['prefix'=>'applications'],function(){
             Route::group(['prefix'=>'support','as'=>'support.'],function(){
                 Route::get('support-ticket',[SupportController::class,'index'])->name('support_ticket');
