@@ -19,8 +19,8 @@ class Order extends Model
     {
         return [
             'total_amount' => 'decimal:2',
-            'shipping_address' => 'array',
-            'billing_address' => 'array',
+            'shipping_address' => 'string',
+            'billing_address' => 'string',
         ];
     }
 }
