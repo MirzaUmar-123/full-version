@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('shipments', function (Blueprint $table) {
             $table->id();
-            $table->integer('order_id');
+            $table->unsignedBigInteger('order_id')->nullable();
             $table->string('tracking_number')->unique();
             $table->string('carrier');
             $table->string('status'); // pending, shipped, delivered
