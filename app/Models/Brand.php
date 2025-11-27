@@ -20,4 +20,6 @@ class Brand extends Model
             'is_active' => 'boolean',
         ];
     }
+    // Additional model methods and relationships can be defined here
+    public function products() { return $this->hasMany(Product::class); }
 }

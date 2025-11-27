@@ -21,4 +21,7 @@ class Shipment extends Model
             'delivered_at' => 'datetime',
         ];
     }
+    // Additional model methods and relationships can be defined here
+    public function order() { return $this->belongsTo(Order::class); }
+public function user() { return $this->belongsTo(User::class); }
 }

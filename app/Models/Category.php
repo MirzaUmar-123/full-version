@@ -13,4 +13,12 @@ class Category extends Model
         'status',
         'image',
     ];
+    protected function casts(): array
+    {
+        return [
+            'status' => 'boolean',
+        ];
+    }
+    // Additional model methods and relationships can be defined here
+    public function products() { return $this->hasMany(Product::class); }
 }

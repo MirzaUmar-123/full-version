@@ -19,4 +19,8 @@ class Payment extends Model
             'amount' => 'decimal:2',
         ];
     }
+    // Additional model methods and relationships can be defined here
+    public function user() { return $this->belongsTo(User::class); }
+public function order() { return $this->belongsTo(Order::class); }
+public function transaction() { return $this->hasOne(Transaction::class); }
 }

@@ -23,4 +23,10 @@ class Order extends Model
             'billing_address' => 'string',
         ];
     }
+    // Additional model methods and relationships can be defined here
+    public function user() { return $this->belongsTo(User::class); }
+public function items() { return $this->hasMany(OrderItem::class); }
+public function shipment() { return $this->hasOne(Shipment::class); }
+public function payment() { return $this->hasOne(Payment::class); }
+public function coupon() { return $this->belongsTo(Coupon::class); }
 }

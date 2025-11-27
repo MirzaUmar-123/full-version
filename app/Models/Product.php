@@ -24,4 +24,11 @@ class Product extends Model
             'stock' => 'integer',
         ];
     }
+
+    // Additional model methods and relationships can be defined here
+    public function brand() { return $this->belongsTo(Brand::class); }
+public function category() { return $this->belongsTo(Category::class); }
+public function reviews() { return $this->hasMany(Review::class); }
+public function orderItems() { return $this->hasMany(OrderItem::class); }
+public function wishlists() { return $this->hasMany(Wishlist::class); }
 }

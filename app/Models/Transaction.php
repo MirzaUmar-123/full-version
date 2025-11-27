@@ -21,4 +21,6 @@ class Transaction extends Model
             'amount' => 'decimal:2',
         ];
     }
+    // Additional model methods and relationships can be defined here
+    public function payment() { return $this->belongsTo(Payment::class); }
 }

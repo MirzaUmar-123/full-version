@@ -21,4 +21,8 @@ class OrderItem extends Model
             'total' => 'decimal:2',
         ];
     }
+    // Additional model methods and relationships can be defined here
+    public function order() { return $this->belongsTo(Order::class); }
+public function product() { return $this->belongsTo(Product::class); }
+
 }
