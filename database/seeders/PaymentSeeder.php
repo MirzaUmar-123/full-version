@@ -15,6 +15,7 @@ class PaymentSeeder extends Seeder
     {
         $payments = [
             [
+                'user_id' => 1,
                 'order_id' => 1,
                 'payment_method' => 'credit_card',
                 'transaction_id' => 'TXN-' . Str::upper(Str::random(10)),
@@ -22,6 +23,7 @@ class PaymentSeeder extends Seeder
                 'status' => 'paid',
             ],
             [
+                'user_id' => 2,
                 'order_id' => 2,
                 'payment_method' => 'paypal',
                 'transaction_id' => 'TXN-' . Str::upper(Str::random(10)),
@@ -29,6 +31,7 @@ class PaymentSeeder extends Seeder
                 'status' => 'paid',
             ],
             [
+                'user_id' => 3,
                 'order_id' => 3,
                 'payment_method' => 'debit_card',
                 'transaction_id' => 'TXN-' . Str::upper(Str::random(10)),
@@ -36,6 +39,7 @@ class PaymentSeeder extends Seeder
                 'status' => 'paid',
             ],
             [
+                'user_id' => 4,
                 'order_id' => 4,
                 'payment_method' => 'cash_on_delivery',
                 'transaction_id' => 'TXN-' . Str::upper(Str::random(10)),
@@ -43,6 +47,7 @@ class PaymentSeeder extends Seeder
                 'status' => 'pending',
             ],
             [
+                'user_id' => 5,
                 'order_id' => 5,
                 'payment_method' => 'paypal',
                 'transaction_id' => 'TXN-' . Str::upper(Str::random(10)),
@@ -50,6 +55,7 @@ class PaymentSeeder extends Seeder
                 'status' => 'failed',
             ],
             [
+                'user_id' => 1,
                 'order_id' => 6,
                 'payment_method' => 'credit_card',
                 'transaction_id' => 'TXN-' . Str::upper(Str::random(10)),
@@ -57,6 +63,7 @@ class PaymentSeeder extends Seeder
                 'status' => 'paid',
             ],
             [
+                'user_id' => 2,
                 'order_id' => 7,
                 'payment_method' => 'debit_card',
                 'transaction_id' => 'TXN-' . Str::upper(Str::random(10)),
@@ -64,6 +71,7 @@ class PaymentSeeder extends Seeder
                 'status' => 'paid',
             ],
             [
+                'user_id' => 3,
                 'order_id' => 8,
                 'payment_method' => 'credit_card',
                 'transaction_id' => 'TXN-' . Str::upper(Str::random(10)),
@@ -71,6 +79,7 @@ class PaymentSeeder extends Seeder
                 'status' => 'paid',
             ],
             [
+                'user_id' => 4,
                 'order_id' => 9,
                 'payment_method' => 'paypal',
                 'transaction_id' => 'TXN-' . Str::upper(Str::random(10)),
@@ -78,6 +87,7 @@ class PaymentSeeder extends Seeder
                 'status' => 'paid',
             ],
             [
+                'user_id' => 5,
                 'order_id' => 10,
                 'payment_method' => 'credit_card',
                 'transaction_id' => 'TXN-' . Str::upper(Str::random(10)),

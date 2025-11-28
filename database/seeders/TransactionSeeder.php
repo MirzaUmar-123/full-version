@@ -15,6 +15,7 @@ class TransactionSeeder extends Seeder
     {
         $transactions = [
             [
+                'payment_id' => 1,
                 'user_id' => 1,
                 'order_id' => 1,
                 'amount' => 120.99,
@@ -24,6 +25,7 @@ class TransactionSeeder extends Seeder
                 'status' => 'success',
             ],
             [
+                'payment_id' => 2,
                 'user_id' => 2,
                 'order_id' => 2,
                 'amount' => 89.50,
@@ -33,6 +35,7 @@ class TransactionSeeder extends Seeder
                 'status' => 'success',
             ],
             [
+                'payment_id' => 3,
                 'user_id' => 3,
                 'order_id' => 3,
                 'amount' => 209.99,
@@ -42,6 +45,7 @@ class TransactionSeeder extends Seeder
                 'status' => 'success',
             ],
             [
+                'payment_id' => 4,
                 'user_id' => 4,
                 'order_id' => 4,
                 'amount' => 350.00,
@@ -51,6 +55,7 @@ class TransactionSeeder extends Seeder
                 'status' => 'pending',
             ],
             [
+                'payment_id' => 5,
                 'user_id' => 5,
                 'order_id' => 5,
                 'amount' => 75.40,
@@ -60,7 +65,8 @@ class TransactionSeeder extends Seeder
                 'status' => 'failed',
             ],
             [
-                'user_id' => 2,
+                'payment_id' => 6,
+                'user_id' => 1,
                 'order_id' => 6,
                 'amount' => 450.75,
                 'type' => 'charge',
@@ -69,7 +75,8 @@ class TransactionSeeder extends Seeder
                 'status' => 'success',
             ],
             [
-                'user_id' => 3,
+                'payment_id' => 7,
+                'user_id' => 2,
                 'order_id' => 7,
                 'amount' => 60.25,
                 'type' => 'charge',
@@ -78,7 +85,8 @@ class TransactionSeeder extends Seeder
                 'status' => 'success',
             ],
             [
-                'user_id' => 1,
+                'payment_id' => 8,
+                'user_id' => 3,
                 'order_id' => 8,
                 'amount' => 499.99,
                 'type' => 'charge',
@@ -87,6 +95,7 @@ class TransactionSeeder extends Seeder
                 'status' => 'success',
             ],
             [
+                'payment_id' => 9,
                 'user_id' => 4,
                 'order_id' => 9,
                 'amount' => 180.00,
@@ -96,6 +105,7 @@ class TransactionSeeder extends Seeder
                 'status' => 'success',
             ],
             [
+                'payment_id' => 10,
                 'user_id' => 5,
                 'order_id' => 10,
                 'amount' => 220.45,

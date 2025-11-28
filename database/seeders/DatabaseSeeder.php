@@ -28,19 +28,29 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-        $this->call(ProductSeeder::class);
-        $this->call(BrandSeeder::class);
-        $this->call(CartSeeder::class);
+        // Seed base users first
+        $this->call(UserSeeder::class);
+
+        // Seed categories and brands before products
         $this->call(CategorySeeder::class);
+        $this->call(BrandSeeder::class);
+
+        // Seed products (depends on categories and brands)
+        $this->call(ProductSeeder::class);
+
+        // Seed coupons
         $this->call(CouponSeeder::class);
+
+        // Seed cart and wishlist
+        $this->call(CartSeeder::class);
+        $this->call(WishlistSeeder::class);
+
+        // Seed orders and related data
         $this->call(OrderSeeder::class);
         $this->call(OrderItemSeeder::class);
         $this->call(PaymentSeeder::class);
-        $this->call(ReviewSeeder::class);
         $this->call(ShipmentSeeder::class);
+        $this->call(ReviewSeeder::class);
         $this->call(TransactionSeeder::class);
-        $this->call(WishlistSeeder::class);
-        $this->call(UserSeeder::class);
     }
 }

@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('coupons', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('created_by')->nullable();
             $table->string('code')->unique();
             $table->decimal('discount_amount', 10, 2);
             $table->text('description')->nullable();

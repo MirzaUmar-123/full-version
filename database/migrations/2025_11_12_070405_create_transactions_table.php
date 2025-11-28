@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('order_id')->nullable();
+            $table->unsignedBigInteger('payment_id')->nullable();
             $table->decimal('amount', 10, 2);
             $table->string('type'); // charge, refund, payout
             $table->string('gateway');

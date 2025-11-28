@@ -14,7 +14,8 @@ class ProductController extends Controller
     {
         $title="All product";
         $description="List of all product";
-        return view('admin.products.index' , compact('title','description'));
+        $products = Product::all();
+        return view('admin.products.index' , compact('title','description','products'));
     }
 
     /**

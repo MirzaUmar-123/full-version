@@ -16,6 +16,7 @@ class ShipmentSeeder extends Seeder
     {
         $shipments = [
             [
+                'user_id' => 1,
                 'order_id' => 1,
                 'tracking_number' => 'TRK-' . Str::upper(Str::random(10)),
                 'carrier' => 'UPS',
@@ -24,6 +25,7 @@ class ShipmentSeeder extends Seeder
                 'delivered_at' => null,
             ],
             [
+                'user_id' => 2,
                 'order_id' => 2,
                 'tracking_number' => 'TRK-' . Str::upper(Str::random(10)),
                 'carrier' => 'FedEx',
@@ -32,6 +34,7 @@ class ShipmentSeeder extends Seeder
                 'delivered_at' => Carbon::now()->subDays(1),
             ],
             [
+                'user_id' => 3,
                 'order_id' => 3,
                 'tracking_number' => 'TRK-' . Str::upper(Str::random(10)),
                 'carrier' => 'DHL',
@@ -40,6 +43,7 @@ class ShipmentSeeder extends Seeder
                 'delivered_at' => null,
             ],
             [
+                'user_id' => 4,
                 'order_id' => 4,
                 'tracking_number' => 'TRK-' . Str::upper(Str::random(10)),
                 'carrier' => 'UPS',
@@ -48,6 +52,7 @@ class ShipmentSeeder extends Seeder
                 'delivered_at' => Carbon::now()->subDays(3),
             ],
             [
+                'user_id' => 5,
                 'order_id' => 5,
                 'tracking_number' => 'TRK-' . Str::upper(Str::random(10)),
                 'carrier' => 'FedEx',
@@ -56,6 +61,7 @@ class ShipmentSeeder extends Seeder
                 'delivered_at' => null,
             ],
             [
+                'user_id' => 1,
                 'order_id' => 6,
                 'tracking_number' => 'TRK-' . Str::upper(Str::random(10)),
                 'carrier' => 'DHL',
@@ -64,6 +70,7 @@ class ShipmentSeeder extends Seeder
                 'delivered_at' => null,
             ],
             [
+                'user_id' => 2,
                 'order_id' => 7,
                 'tracking_number' => 'TRK-' . Str::upper(Str::random(10)),
                 'carrier' => 'UPS',
@@ -72,6 +79,7 @@ class ShipmentSeeder extends Seeder
                 'delivered_at' => Carbon::now()->subDays(1),
             ],
             [
+                'user_id' => 3,
                 'order_id' => 8,
                 'tracking_number' => 'TRK-' . Str::upper(Str::random(10)),
                 'carrier' => 'FedEx',
@@ -80,6 +88,7 @@ class ShipmentSeeder extends Seeder
                 'delivered_at' => null,
             ],
             [
+                'user_id' => 4,
                 'order_id' => 9,
                 'tracking_number' => 'TRK-' . Str::upper(Str::random(10)),
                 'carrier' => 'DHL',
@@ -88,6 +97,7 @@ class ShipmentSeeder extends Seeder
                 'delivered_at' => Carbon::now()->subDays(2),
             ],
             [
+                'user_id' => 5,
                 'order_id' => 10,
                 'tracking_number' => 'TRK-' . Str::upper(Str::random(10)),
                 'carrier' => 'UPS',

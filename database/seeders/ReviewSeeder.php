@@ -15,7 +15,8 @@ class ReviewSeeder extends Seeder
         $reviews = [
             [
                 'user_id' => 1,
-                'product_id' => 2,
+                'product_id' => 3,
+                'order_id' => 1,
                 'rating' => 5,
                 'title' => 'Excellent product!',
                 'body' => 'This product exceeded my expectations. High quality and fast shipping.',
@@ -24,7 +25,8 @@ class ReviewSeeder extends Seeder
             ],
             [
                 'user_id' => 2,
-                'product_id' => 3,
+                'product_id' => 4,
+                'order_id' => 2,
                 'rating' => 4,
                 'title' => 'Very good',
                 'body' => 'Overall satisfied. Minor issues but nothing serious.',
@@ -33,7 +35,8 @@ class ReviewSeeder extends Seeder
             ],
             [
                 'user_id' => 3,
-                'product_id' => 1,
+                'product_id' => 2,
+                'order_id' => 3,
                 'rating' => 3,
                 'title' => 'Average product',
                 'body' => 'It works okay but could be improved in some areas.',
@@ -42,7 +45,8 @@ class ReviewSeeder extends Seeder
             ],
             [
                 'user_id' => 4,
-                'product_id' => 4,
+                'product_id' => 5,
+                'order_id' => 4,
                 'rating' => 5,
                 'title' => 'Highly recommend!',
                 'body' => 'Fantastic product. Great value for money.',
@@ -51,7 +55,8 @@ class ReviewSeeder extends Seeder
             ],
             [
                 'user_id' => 5,
-                'product_id' => 5,
+                'product_id' => 6,
+                'order_id' => 5,
                 'rating' => 2,
                 'title' => 'Not satisfied',
                 'body' => 'The product did not meet my expectations. Poor build quality.',
@@ -60,7 +65,8 @@ class ReviewSeeder extends Seeder
             ],
             [
                 'user_id' => 1,
-                'product_id' => 6,
+                'product_id' => 7,
+                'order_id' => 6,
                 'rating' => 4,
                 'title' => 'Good product',
                 'body' => 'Works well, would purchase again.',
@@ -69,7 +75,8 @@ class ReviewSeeder extends Seeder
             ],
             [
                 'user_id' => 2,
-                'product_id' => 7,
+                'product_id' => 8,
+                'order_id' => 7,
                 'rating' => 5,
                 'title' => 'Perfect!',
                 'body' => 'Exactly what I needed. Excellent quality.',
@@ -78,16 +85,18 @@ class ReviewSeeder extends Seeder
             ],
             [
                 'user_id' => 3,
-                'product_id' => 8,
+                'product_id' => 9,
+                'order_id' => 8,
                 'rating' => 3,
-                'title' => 'It’s okay',
+                'title' => "It's okay",
                 'body' => 'Not bad, but not great either.',
                 'status' => 'approved',
                 'helpful_count' => 2,
             ],
             [
                 'user_id' => 4,
-                'product_id' => 2,
+                'product_id' => 3,
+                'order_id' => 9,
                 'rating' => 4,
                 'title' => 'Good value',
                 'body' => 'Fair price and good performance.',
@@ -96,7 +105,8 @@ class ReviewSeeder extends Seeder
             ],
             [
                 'user_id' => 5,
-                'product_id' => 3,
+                'product_id' => 4,
+                'order_id' => 10,
                 'rating' => 5,
                 'title' => 'Loved it!',
                 'body' => 'Exceeded expectations in every way. Will buy again.',

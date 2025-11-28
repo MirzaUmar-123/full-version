@@ -74,12 +74,12 @@ return new class extends Migration
             }
         });
 
-        // Add foreign keys to cart table
-        Schema::table('cart', function (Blueprint $table) {
-            if (Schema::hasColumn('cart', 'user_id')) {
+        // Add foreign keys to carts table
+        Schema::table('carts', function (Blueprint $table) {
+            if (Schema::hasColumn('carts', 'user_id')) {
                 $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             }
-            if (Schema::hasColumn('cart', 'product_id')) {
+            if (Schema::hasColumn('carts', 'product_id')) {
                 $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             }
         });
@@ -142,11 +142,11 @@ return new class extends Migration
             }
         });
 
-        Schema::table('cart', function (Blueprint $table) {
-            if (Schema::hasColumn('cart', 'product_id')) {
+        Schema::table('carts', function (Blueprint $table) {
+            if (Schema::hasColumn('carts', 'product_id')) {
                 $table->dropForeign(['product_id']);
             }
-            if (Schema::hasColumn('cart', 'user_id')) {
+            if (Schema::hasColumn('carts', 'user_id')) {
                 $table->dropForeign(['user_id']);
             }
         });

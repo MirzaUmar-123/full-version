@@ -15,6 +15,7 @@ class CouponSeeder extends Seeder
     {
         $coupons = [
             [
+                'created_by' => 1,
                 'code' => 'WELCOME10',
                 'discount_amount' => 10.00,
                 'description' => '10% off for new customers.',
@@ -24,6 +25,7 @@ class CouponSeeder extends Seeder
                 'is_active' => true,
             ],
             [
+                'created_by' => 1,
                 'code' => 'SUMMER15',
                 'discount_amount' => 15.00,
                 'description' => '15% discount on all summer items.',
@@ -33,6 +35,7 @@ class CouponSeeder extends Seeder
                 'is_active' => true,
             ],
             [
+                'created_by' => 1,
                 'code' => 'FREESHIP50',
                 'discount_amount' => 0.00,
                 'description' => 'Free shipping on orders above $50.',
@@ -42,6 +45,7 @@ class CouponSeeder extends Seeder
                 'is_active' => true,
             ],
             [
+                'created_by' => 1,
                 'code' => 'BLACKFRIDAY20',
                 'discount_amount' => 20.00,
                 'description' => '20% off storewide during Black Friday.',
@@ -51,6 +55,7 @@ class CouponSeeder extends Seeder
                 'is_active' => true,
             ],
             [
+                'created_by' => 1,
                 'code' => 'WINTER5',
                 'discount_amount' => 5.00,
                 'description' => 'Flat $5 off on winter items.',
@@ -60,6 +65,7 @@ class CouponSeeder extends Seeder
                 'is_active' => true,
             ],
             [
+                'created_by' => 1,
                 'code' => 'MEGA25',
                 'discount_amount' => 25.00,
                 'description' => 'Save $25 on orders above $200.',
@@ -69,6 +75,7 @@ class CouponSeeder extends Seeder
                 'is_active' => true,
             ],
             [
+                'created_by' => 1,
                 'code' => 'FLASH30',
                 'discount_amount' => 30.00,
                 'description' => 'Flash sale: $30 discount for 24 hours.',
@@ -78,6 +85,7 @@ class CouponSeeder extends Seeder
                 'is_active' => true,
             ],
             [
+                'created_by' => 1,
                 'code' => 'VIP40',
                 'discount_amount' => 40.00,
                 'description' => 'Exclusive $40 discount for VIP members.',
@@ -87,6 +95,7 @@ class CouponSeeder extends Seeder
                 'is_active' => true,
             ],
             [
+                'created_by' => 1,
                 'code' => 'HOLIDAYFREE',
                 'discount_amount' => 0.00,
                 'description' => 'Holiday offer: Free shipping on any order.',
@@ -96,6 +105,7 @@ class CouponSeeder extends Seeder
                 'is_active' => true,
             ],
             [
+                'created_by' => 1,
                 'code' => 'SAVE50',
                 'discount_amount' => 50.00,
                 'description' => '$50 off for orders above $300.',
