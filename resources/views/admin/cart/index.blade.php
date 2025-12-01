@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb-main">
-                    <h4 class="text-capitalize breadcrumb-title">Shopping Cart Management</h4>
+                    <h4 class="text-capitalize breadcrumb-title">Carts Management</h4>
                     <div class="breadcrumb-action justify-content-center flex-wrap">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
@@ -23,7 +23,7 @@
             <div class="col-12 mb-30">
                 <div class="card">
                     <div class="card-header">
-                        <h6 class="mb-0">Shopping Carts</h6>
+                        <h6 class="mb-0">Carts</h6>
                     </div>
                     <div class="card-body pt-0">
                         <div
@@ -54,85 +54,38 @@
                                 <table class="table mb-0 table-borderless">
                                     <thead>
                                         <tr class="userDatatable-header">
-                                            <th><span class="userDatatable-title">Customer</span></th>
-                                            <th><span class="userDatatable-title">Items Count</span></th>
-                                            <th><span class="userDatatable-title">Cart Total</span></th>
-                                            <th><span class="userDatatable-title">Status</span></th>
-                                            <th><span class="userDatatable-title">Last Updated</span></th>
+                                            <th><span class="userDatatable-title">ID</span></th>
+                                            <th><span class="userDatatable-title">User ID</span></th>
+                                            <th><span class="userDatatable-title">Product ID</span></th>
+                                            <th><span class="userDatatable-title">Quantity</span></th>
                                             <th><span class="userDatatable-title">Actions</span></th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($carts as $cart)
                                         <tr class="userDatatable-row">
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    John Doe
+                                                    {{$cart->id}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <span class="badge bg-light-primary">3 Items</span>
+                                                    {{$cart->user_id}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    $245.99
+                                                    {{$cart->product_id}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <span class="badge bg-light-success">Active</span>
+                                                    {{$cart->quantity}}
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="userDatatable-content">
-                                                    2 hours ago
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
-                                                    <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="View">
-                                                            <i class="uil uil-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="btn btn-danger btn-sm" title="Delete"
-                                                            onclick="return confirm('Are you sure?');">
-                                                            <i class="uil uil-trash"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr class="userDatatable-row">
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    Jane Smith
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="badge bg-light-primary">5 Items</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    $512.45
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="badge bg-light-warning">Abandoned</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    1 day ago
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
+                                                <ul class="d-flex  gap-2">
                                                     <li>
                                                         <a href="#" class="btn btn-primary btn-sm" title="View">
                                                             <i class="uil uil-eye"></i>
@@ -148,6 +101,7 @@
                                             </td>
                                         </tr>
                                     </tbody>
+                                    @endforeach
                                 </table>
                             </div>
                         </div>

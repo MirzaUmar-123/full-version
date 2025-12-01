@@ -14,7 +14,8 @@ class CartController extends Controller
     {
         $title="All orders";
         $description="List of all orders";
-        return view('admin.cart.index' , compact('title','description'));
+        $carts=Cart::all();
+        return view('admin.cart.index' , compact('title','description','carts'));
     }
 
     /**

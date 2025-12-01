@@ -68,18 +68,21 @@ Route::get('/category', [CategoryController::class, 'index'])->name('showallcate
 Route::post('/category/store', [CategoryController::class, 'store'])->name('storecategories');
 Route::put('/category/update', [CategoryController::class, 'update'])->name('updatecategories');
 Route::get('/category/delete/${id}', [CategoryController::class, 'destroy'])->name('deletecategories');
+Route::get('/category/create', [CategoryController::class, 'create'])->name('createcategories');
 
 
 Route::get('/coupon', [CouponController::class, 'index'])->name('showallcoupons');
 Route::post('/coupon/store', [CouponController::class, 'store'])->name('storecoupons');
 Route::put('/coupon/update', [CouponController::class, 'update'])->name('updatecoupons');
 Route::get('/coupon/delete/${id}', [CouponController::class, 'destroy'])->name('deletecoupons');
+Route::get('/coupon/create', [CouponController::class, 'create'])->name('createcoupons');
 
 
 Route::get('/order', [OrderController::class, 'index'])->name('showallorders');
 Route::post('/order/store', [OrderController::class, 'store'])->name('storeorders');
 Route::put('/order/update', [OrderController::class, 'update'])->name('updateorders');
 Route::get('/order/delete/${id}', [OrderController::class, 'destroy'])->name('deleteorders');
+Route::get('/order/create', [OrderController::class, 'create'])->name('createorders');
 
 
 Route::get('/orderitem', [OrderItemController::class, 'index'])->name('showallorderitems');
@@ -98,6 +101,7 @@ Route::get('/user', [UserController::class, 'index'])->name('showallusers');
 Route::post('/user/store', [UserController::class, 'store'])->name('storeusers');
 Route::put('/user/update', [UserController::class, 'update'])->name('updateusers');
 Route::get('/user/delete/${id}', [UserController::class, 'destroy'])->name('deleteusers');
+Route::get('/user/create', [UserController::class, 'create'])->name('createusers');
 
 
 Route::get('/wishlist', [WishlistController::class, 'index'])->name('showallwishlists');

@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller {
-    
+
     /**
      * Display user members of the resource.
      *
@@ -14,7 +15,8 @@ class UserController extends Controller {
     public function index(){
         $title = "User Members";
         $description = "Some description for the page";
-        return view('pages.applications.user.member',compact('title','description'));
+        $users = User::all();
+        return view('admin.users.index',compact('title','description','users'));
     }
 
     /**

@@ -10,7 +10,7 @@
                     <div class="breadcrumb-action justify-content-center flex-wrap">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><i class="uil uil-estate"></i>Admin</a></li>
+                                <li class="breadcrumb-item"><a href="#"><i class="uil uil-estate"></i>Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Orders</li>
                             </ol>
                         </nav>
@@ -23,7 +23,7 @@
             <div class="col-12 mb-30">
                 <div class="card">
                     <div class="card-header">
-                        <h6 class="mb-0">Customer Orders</h6>
+                        <h6 class="mb-0">Orders</h6>
                     </div>
                     <div class="card-body pt-0">
                         <div
@@ -57,38 +57,57 @@
                                     <thead>
                                         <tr class="userDatatable-header">
                                             <th><span class="userDatatable-title">Order ID</span></th>
-                                            <th><span class="userDatatable-title">Customer</span></th>
-                                            <th><span class="userDatatable-title">Order Date</span></th>
-                                            <th><span class="userDatatable-title">Total Amount</span></th>
+                                            <th><span class="userDatatable-title">User ID</span></th>
+                                            <th><span class="userDatatable-title">Order Number</span></th>
                                             <th><span class="userDatatable-title">Status</span></th>
+                                            <th><span class="userDatatable-title">Total Amount</span></th>
+                                            <th><span class="userDatatable-title">Payment Method</span></th>
+                                            <th><span class="userDatatable-title">Shipping Adress</span></th>
+                                            <th><span class="userDatatable-title">Billing Address</span></th>
                                             <th><span class="userDatatable-title">Actions</span></th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($orders as $order)
                                         <tr class="userDatatable-row">
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <h6>#ORD-001</h6>
+                                                    <h6>{{$order->id}}</h6>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    John Doe
+                                                    {{$order->user_id}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    18 Nov 2024
+                                                    {{$order->order_number}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    $245.99
+                                                    {{$order->status}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <span class="badge bg-light-success">Delivered</span>
+                                                    {{$order->total_amount}}
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="userDatatable-content">
+                                                    {{$order->payment_method}}
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="userDatatable-content">
+                                                    {{$order->shipping_address}}
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="userDatatable-content">
+                                                    {{$order->billing_address}}
                                                 </div>
                                             </td>
                                             <td>
@@ -106,88 +125,7 @@
                                                 </ul>
                                             </td>
                                         </tr>
-                                        <tr class="userDatatable-row">
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <h6>#ORD-002</h6>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    Jane Smith
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    17 Nov 2024
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    $512.45
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="badge bg-light-info">Shipped</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
-                                                    <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="View">
-                                                            <i class="uil uil-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="btn btn-info btn-sm" title="Edit">
-                                                            <i class="uil uil-edit"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr class="userDatatable-row">
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <h6>#ORD-003</h6>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    Mike Johnson
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    16 Nov 2024
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    $189.50
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="badge bg-light-warning">Pending</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
-                                                    <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="View">
-                                                            <i class="uil uil-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="btn btn-info btn-sm" title="Edit">
-                                                            <i class="uil uil-edit"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

@@ -14,7 +14,8 @@ class OrderController extends Controller
     {
         $title="All orders";
         $description="List of all orders";
-        return view('admin.order.index' , compact('title','description'));
+        $orders = Order::all();
+        return view('admin.order.index' , compact('title','description', 'orders'));
     }
 
     /**
@@ -22,7 +23,9 @@ class OrderController extends Controller
      */
     public function create()
     {
-        //
+        $title="All orders";
+        $description="List of all orders";
+        return view('admin.order.create' , compact('title','description'));
     }
 
     /**
