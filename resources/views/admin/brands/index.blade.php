@@ -10,8 +10,8 @@
                     <div class="breadcrumb-action justify-content-center flex-wrap">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><i class="uil uil-estate"></i>Admin</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Brands</li>
+                                <li class="breadcrumb-item"><a href="#"><i class="las la-home"></i>Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Brand Management</li>
                             </ol>
                         </nav>
                     </div>
@@ -47,27 +47,52 @@
                                 <table class="table mb-0 table-borderless">
                                     <thead>
                                         <tr class="userDatatable-header">
+                                            <th><span class="userDatatable-title">ID</span></th>
                                             <th><span class="userDatatable-title">Brand Name</span></th>
+                                            <th><span class="userDatatable-title">Brand Slug</span></th>
                                             <th><span class="userDatatable-title">Description</span></th>
+                                            <th><span class="userDatatable-title">Logo Path</span></th>
+                                            <th><span class="userDatatable-title">Is Active</span></th>
                                             <th><span class="userDatatable-title">Created Date</span></th>
                                             <th><span class="userDatatable-title">Actions</span></th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($brands as $brand)
                                         <tr class="userDatatable-row">
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <h6>Brand One</h6>
+                                                    <h6>{{$brand->id}}</h6>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    Premium Quality Brand
+                                                    {{$brand->name}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    15 Mar 2024
+                                                    {{$brand->slug}}
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="userDatatable-content">
+                                                    {{$brand->description}}
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="userDatatable-content">
+                                                    {{$brand->logo_path}}
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="userDatatable-content">
+                                                    {{$brand->is_active ? 'Yes' : 'No' }}
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="userDatatable-content">
+                                                    {{$brand->created_at->format('F d, Y') }}
                                                 </div>
                                             </td>
                                             <td>
@@ -86,43 +111,11 @@
                                                 </ul>
                                             </td>
                                         </tr>
-                                        <tr class="userDatatable-row">
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <h6>Brand Two</h6>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    Affordable Brand
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    10 Mar 2024
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
-                                                    <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="Edit">
-                                                            <i class="uil uil-edit"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="btn btn-danger btn-sm" title="Delete"
-                                                            onclick="return confirm('Are you sure?');">
-                                                            <i class="uil uil-trash"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-
                         <div class="d-flex justify-content-between align-items-center mt-30">
                             <span class="fs-14">Showing 1 to 10 of 100 entries</span>
                             <nav aria-label="Page navigation">

@@ -22,7 +22,9 @@ class CartController extends Controller
      */
     public function create()
     {
-        //
+        $title="Create carts";
+        $description="Create a new cart";
+        return view('admin.cart.create' , compact('title','description'));
     }
 
     /**
@@ -50,7 +52,13 @@ class CartController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $Cart=Cart::where('id',$id)->firstorFail();
+        if($Cart){
+        return view('admin.cart.edit', compact('title', 'description','Cart'));
+        }
+        else{
+            return response()->json(['message'=>'cart not found'],404);
+        }
     }
 
     /**
