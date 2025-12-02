@@ -25,8 +25,7 @@ class BrandController extends Controller
     {
         $title="All brands";
         $description="List of all brand";
-        $brands = Brand::all();
-        return view('admin.brands.create' , compact('title','description','brands'));
+        return view('admin.brands.create' , compact('title','description'));
     }
 
     /**
