@@ -14,7 +14,8 @@ class ReviewController extends Controller
     {
         $title="All reviews";
         $description="List of all reviews";
-        return view('admin.review.review' , compact('title','description'));
+        $reviews = Review::all();
+        return view('admin.review.review' , compact('title','description', 'reviews'));
     }
 
     /**

@@ -14,7 +14,8 @@ class TransactionController extends Controller
     {
         $title="All transactions";
         $description="List of all transactions";
-        return view('admin.transaction.transaction' , compact('title','description'));
+        $transactions = Transaction::all();
+        return view('admin.transaction.transaction' , compact('title','description', 'transactions'));
     }
 
     /**

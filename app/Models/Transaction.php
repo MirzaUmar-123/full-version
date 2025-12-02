@@ -9,6 +9,7 @@ class Transaction extends Model
     protected $fillable = [
 'user_id',
 'order_id',
+'payment_id',
 'amount',
 'type', // charge, refund, payout
 'gateway',

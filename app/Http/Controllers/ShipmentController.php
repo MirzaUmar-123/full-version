@@ -14,7 +14,8 @@ class ShipmentController extends Controller
     {
         $title="All shipments";
         $description="List of all shipments";
-        return view('admin.shipment.shipment' , compact('title','description'));
+        $shipments = Shipment::all();
+        return view('admin.shipment.shipment' , compact('title','description', 'shipments'));
     }
 
     /**

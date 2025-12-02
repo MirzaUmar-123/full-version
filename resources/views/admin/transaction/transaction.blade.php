@@ -10,7 +10,7 @@
                     <div class="breadcrumb-action justify-content-center flex-wrap">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><i class="uil uil-estate"></i>Admin</a></li>
+                                <li class="breadcrumb-item"><a href="#"><i class="las la-home"></i>Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Transactions</li>
                             </ol>
                         </nav>
@@ -54,143 +54,64 @@
                                 <table class="table mb-0 table-borderless">
                                     <thead>
                                         <tr class="userDatatable-header">
-                                            <th><span class="userDatatable-title">Transaction ID</span></th>
-                                            <th><span class="userDatatable-title">Reference</span></th>
-                                            <th><span class="userDatatable-title">Type</span></th>
+                                            <th><span class="userDatatable-title">ID</span></th>
+                                            <th><span class="userDatatable-title">User ID</span></th>
+                                            <th><span class="userDatatable-title">Order ID</span></th>
+                                            <th><span class="userDatatable-title">Payment ID</span></th>
                                             <th><span class="userDatatable-title">Amount</span></th>
-                                            <th><span class="userDatatable-title">Balance</span></th>
-                                            <th><span class="userDatatable-title">Description</span></th>
-                                            <th><span class="userDatatable-title">Date</span></th>
+                                            <th><span class="userDatatable-title">Type</span></th>
+                                            <th><span class="userDatatable-title">Gateway</span></th>
+                                            <th><span class="userDatatable-title">Reference</span></th>
+                                            <th><span class="userDatatable-title">Status</span></th>
                                             <th><span class="userDatatable-title">Actions</span></th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($transactions as $transaction)
                                         <tr class="userDatatable-row">
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <h6>TXN-2024-001</h6>
+                                                    <h6>{{$transaction->id}}</h6>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    ORD-001
+                                                    {{$transaction->user_id}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <span class="badge bg-light-success">Credit</span>
+                                                    {{$transaction->order_id}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    +$245.99
+                                                    {{$transaction->payment_id}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    $50,245.99
+                                                    {{$transaction->amount}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    Order payment received
+                                                    {{$transaction->type}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    18 Nov 2024
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
-                                                    <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="View">
-                                                            <i class="uil uil-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr class="userDatatable-row">
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <h6>TXN-2024-002</h6>
+                                                    {{$transaction->gateway}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    REF-001
+                                                    {{$transaction->reference}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <span class="badge bg-light-danger">Refund</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    -$50.00
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    $50,195.99
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    Refund processed
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    17 Nov 2024
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
-                                                    <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="View">
-                                                            <i class="uil uil-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr class="userDatatable-row">
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <h6>TXN-2024-003</h6>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    ORD-002
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="badge bg-light-success">Credit</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    +$512.45
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    $50,708.44
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    Order payment received
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    16 Nov 2024
+                                                    {{$transaction->status}}
                                                 </div>
                                             </td>
                                             <td>
@@ -204,6 +125,7 @@
                                             </td>
                                         </tr>
                                     </tbody>
+                                    @endforeach
                                 </table>
                             </div>
                         </div>

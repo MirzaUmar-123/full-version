@@ -58,137 +58,58 @@
                                 <table class="table mb-0 table-borderless">
                                     <thead>
                                         <tr class="userDatatable-header">
-                                            <th><span class="userDatatable-title">Shipment ID</span></th>
+                                            <th><span class="userDatatable-title">ID</span></th>
+                                            <th><span class="userDatatable-title">User ID</span></th>
                                             <th><span class="userDatatable-title">Order ID</span></th>
-                                            <th><span class="userDatatable-title">Carrier</span></th>
                                             <th><span class="userDatatable-title">Tracking Number</span></th>
-                                            <th><span class="userDatatable-title">Shipped Date</span></th>
+                                            <th><span class="userDatatable-title">Carrier</span></th>
                                             <th><span class="userDatatable-title">Status</span></th>
+                                            <th><span class="userDatatable-title">Shipped at</span></th>
+                                            <th><span class="userDatatable-title">Delivered at</span></th>
                                             <th><span class="userDatatable-title">Actions</span></th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($shipments as $shipment)
                                         <tr class="userDatatable-row">
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <h6>SHP-001</h6>
+                                                    <h6>{{$shipment->id}}</h6>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    #ORD-001
+                                                    {{$shipment->user_id}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <span class="badge bg-light-primary">FedEx</span>
+                                                    {{$shipment->order_id}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    1234567890
+                                                    {{$shipment->tracking_number}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    18 Nov 2024
+                                                    {{$shipment->carrier}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <span class="badge bg-light-success">Delivered</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
-                                                    <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="Track">
-                                                            <i class="uil uil-map-marker"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="btn btn-info btn-sm" title="Edit">
-                                                            <i class="uil uil-edit"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr class="userDatatable-row">
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <h6>SHP-002</h6>
+                                                    {{$shipment->status}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    #ORD-002
+                                                    {{$shipment->shipped_at}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <span class="badge bg-light-info">UPS</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    9876543210
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    17 Nov 2024
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="badge bg-light-info">Shipped</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
-                                                    <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="Track">
-                                                            <i class="uil uil-map-marker"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="btn btn-info btn-sm" title="Edit">
-                                                            <i class="uil uil-edit"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr class="userDatatable-row">
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <h6>SHP-003</h6>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    #ORD-003
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="badge bg-light-warning">DHL</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    5555666677
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    16 Nov 2024
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="badge bg-light-warning">Processing</span>
+                                                    {{$shipment->delivered_at}}
                                                 </div>
                                             </td>
                                             <td>
@@ -207,6 +128,7 @@
                                             </td>
                                         </tr>
                                     </tbody>
+                                    @endforeach
                                 </table>
                             </div>
                         </div>

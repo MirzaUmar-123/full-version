@@ -10,7 +10,7 @@
                     <div class="breadcrumb-action justify-content-center flex-wrap">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><i class="uil uil-estate"></i>Admin</a></li>
+                                <li class="breadcrumb-item"><a href="#"><i class="las la-home"></i>Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Reviews</li>
                             </ol>
                         </nav>
@@ -56,139 +56,64 @@
                                 <table class="table mb-0 table-borderless">
                                     <thead>
                                         <tr class="userDatatable-header">
-                                            <th><span class="userDatatable-title">Product</span></th>
-                                            <th><span class="userDatatable-title">Customer</span></th>
+                                            <th><span class="userDatatable-title">ID</span></th>
+                                            <th><span class="userDatatable-title">User ID</span></th>
+                                            <th><span class="userDatatable-title">Product ID</span></th>
+                                            <th><span class="userDatatable-title">Order ID</span></th>
                                             <th><span class="userDatatable-title">Rating</span></th>
-                                            <th><span class="userDatatable-title">Review Text</span></th>
+                                            <th><span class="userDatatable-title">Title</span></th>
+                                            <th><span class="userDatatable-title">Body</span></th>
                                             <th><span class="userDatatable-title">Status</span></th>
-                                            <th><span class="userDatatable-title">Date</span></th>
+                                            <th><span class="userDatatable-title">Helpful Count</span></th>
                                             <th><span class="userDatatable-title">Actions</span></th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($reviews as $review)
                                         <tr class="userDatatable-row">
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <h6>Premium Headphones</h6>
+                                                    {{$review->id}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    John Doe
+                                                    {{$review->user_id}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <span class="color-warning">★★★★★</span>
+                                                    {{$review->product_id}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    Great quality and excellent sound...
+                                                    {{$review->order_id}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <span class="badge bg-light-success">Approved</span>
+                                                    {{$review->rating}} Stars
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    15 Nov 2024
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
-                                                    <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="View">
-                                                            <i class="uil uil-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="btn btn-danger btn-sm" title="Delete"
-                                                            onclick="return confirm('Are you sure?');">
-                                                            <i class="uil uil-trash"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr class="userDatatable-row">
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <h6>Wireless Mouse</h6>
+                                                    {{$review->title}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    Jane Smith
+                                                    {{$review->body}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <span class="color-warning">★★★★</span>
+                                                    {{$review->status}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    Very responsive and comfortable to use...
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="badge bg-light-warning">Pending</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    14 Nov 2024
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
-                                                    <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="View">
-                                                            <i class="uil uil-eye"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="btn btn-danger btn-sm" title="Delete"
-                                                            onclick="return confirm('Are you sure?');">
-                                                            <i class="uil uil-trash"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr class="userDatatable-row">
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <h6>USB-C Cable</h6>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    Mike Johnson
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="color-warning">★★</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    Cable broke after 2 weeks of use...
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="badge bg-light-danger">Rejected</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    13 Nov 2024
+                                                    {{$review->helpful_count}}
                                                 </div>
                                             </td>
                                             <td>
@@ -208,6 +133,7 @@
                                             </td>
                                         </tr>
                                     </tbody>
+                                    @endforeach
                                 </table>
                             </div>
                         </div>
