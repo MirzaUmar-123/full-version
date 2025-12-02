@@ -53,13 +53,7 @@ class CartController extends Controller
      */
     public function edit(string $id)
     {
-        $Cart=Cart::where('id',$id)->firstorFail();
-        if($Cart){
-        return view('admin.cart.edit', compact('title', 'description','Cart'));
-        }
-        else{
-            return response()->json(['message'=>'cart not found'],404);
-        }
+        //
     }
 
     /**
