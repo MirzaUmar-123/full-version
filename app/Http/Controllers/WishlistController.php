@@ -23,7 +23,9 @@ class WishlistController extends Controller
      */
     public function create()
     {
-        //
+        $title="Add Wishlist";
+        $description="Create a new wishlist";
+        return view('admin.wishlist.create' , compact('title','description'));
     }
 
     /**
