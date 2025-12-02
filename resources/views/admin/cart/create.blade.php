@@ -2,4 +2,5 @@
 @section('title',$title)
 @section('description',$description)
 @section('content')
+
 @endsection
