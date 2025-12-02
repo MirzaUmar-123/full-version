@@ -23,7 +23,9 @@ class ReviewController extends Controller
      */
     public function create()
     {
-        //
+        $title="Add Review";
+        $description="Create a new review";
+        return view('admin.review.create' , compact('title','description'));
     }
 
     /**
