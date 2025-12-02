@@ -14,7 +14,8 @@ class WishlistController extends Controller
     {
         $title="All wishlists";
         $description="List of all wishlists";
-        return view('admin.wishlist.wishlist' , compact('title','description'));
+        $wishlists=Wishlist::all();
+        return view('admin.wishlist.wishlist' , compact('title','description', 'wishlists'));
     }
 
     /**
