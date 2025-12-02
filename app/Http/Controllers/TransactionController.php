@@ -23,7 +23,9 @@ class TransactionController extends Controller
      */
     public function create()
     {
-        //
+        $title="Add Transaction";
+        $description="Create a new transaction";
+        return view('admin.transaction.create' , compact('title','description'));
     }
 
     /**
