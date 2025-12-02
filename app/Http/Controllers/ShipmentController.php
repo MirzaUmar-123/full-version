@@ -23,7 +23,9 @@ class ShipmentController extends Controller
      */
     public function create()
     {
-        //
+        $title="Add Shipment";
+        $description="Create a new shipment";
+        return view('admin.shipment.create' , compact('title','description'));
     }
 
     /**
