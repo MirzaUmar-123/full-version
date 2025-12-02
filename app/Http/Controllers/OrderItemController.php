@@ -23,7 +23,9 @@ class OrderItemController extends Controller
      */
     public function create()
     {
-        //
+        $title="All orderitems";
+        $description="List of all orderitems";
+        return view('admin.orderitem.create' , compact('title','description'));
     }
 
     /**
