@@ -23,7 +23,9 @@ class PaymentController extends Controller
      */
     public function create()
     {
-        //
+        $title="All payments";
+        $description="List of all payments";
+        return view('admin.payment.create' , compact('title','description',));
     }
 
     /**
