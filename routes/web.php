@@ -89,12 +89,14 @@ Route::get('/orderitem', [OrderItemController::class, 'index'])->name('showallor
 Route::post('/orderitem/store', [OrderItemController::class, 'store'])->name('storeorderitems');
 Route::put('/orderitem/update', [OrderItemController::class, 'update'])->name('updateorderitems');
 Route::get('/orderitem/delete/${id}', [OrderItemController::class, 'destroy'])->name('deleteorderitems');
+Route::get('/orderitem/create', [OrderItemController::class, 'create'])->name('createorderitems');
 
 
 Route::get('/shipment', [ShipmentController::class, 'index'])->name('showallshipments');
 Route::post('/shipment/store', [ShipmentController::class, 'store'])->name('storeshipments');
 Route::put('/shipment/update', [ShipmentController::class, 'update'])->name('updateshipments');
 Route::get('/shipment/delete/${id}', [ShipmentController::class, 'destroy'])->name('deleteshipments');
+Route::get('/shipment/create', [ShipmentController::class, 'create'])->name('createshipments');
 
 
 Route::get('/user', [UserController::class, 'index'])->name('showallusers');
@@ -108,21 +110,24 @@ Route::get('/wishlist', [WishlistController::class, 'index'])->name('showallwish
 Route::post('/wishlist/store', [WishlistController::class, 'store'])->name('storewishlists');
 Route::put('/wishlist/update', [WishlistController::class, 'update'])->name('updatewishlists');
 Route::get('/wishlist/delete/${id}', [WishlistController::class, 'destroy'])->name('deletewishlists');
+Route::get('/wishlist/create', [WishlistController::class, 'create'])->name('createwishlists');
 
 
 Route::get('/review', [ReviewController::class, 'index'])->name('showallreviews');
 Route::post('/review/store', [ReviewController::class, 'store'])->name('storereviews');
 Route::put('/review/update', [ReviewController::class, 'update'])->name('updatereviews');
 Route::get('/review/delete/${id}', [ReviewController::class, 'destroy'])->name('deletereviews');
-
+Route::get('/review/create', [ReviewController::class, 'create'])->name('createreviews');
 
 Route::get('/payment', [PaymentController::class, 'index'])->name('showallpayments');
 Route::post('/payment/store', [PaymentController::class, 'store'])->name('sorepayments');
 Route::put('/payment/update', [PaymentController::class, 'update'])->name('updatepayments');
 Route::get('/payment/delete/${id}', [PaymentController::class, 'destroy'])->name('deletepayments');
+Route::get('/payment/create', [PaymentController::class, 'create'])->name('createpayments');
 
 
 Route::get('/transaction', [TransactionController::class, 'index'])->name('showalltransactions');
 Route::post('/transaction/store', [TransactionController::class, 'store'])->name('storetransactions');
 Route::put('/transaction/update', [TransactionController::class, 'update'])->name('updatetransactions');
 Route::get('/transaction/delete/${id}', [TransactionController::class, 'destroy'])->name('deletetransactions');
+Route::get('/transaction/create', [TransactionController::class, 'create'])->name('createtransactions');

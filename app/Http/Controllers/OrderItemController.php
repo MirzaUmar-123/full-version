@@ -14,7 +14,8 @@ class OrderItemController extends Controller
     {
         $title="All orderitems";
         $description="List of all orderitems";
-        return view('admin.orderitem.orderitem' , compact('title','description'));
+        $orderitems=OrderItem::all();
+        return view('admin.orderitem.orderitem' , compact('title','description','orderitems'));
     }
 
     /**

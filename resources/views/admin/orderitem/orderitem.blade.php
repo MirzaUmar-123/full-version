@@ -10,7 +10,7 @@
                     <div class="breadcrumb-action justify-content-center flex-wrap">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><i class="uil uil-estate"></i>Admin</a></li>
+                                <li class="breadcrumb-item"><a href="#"><i class="las la-home"></i>Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Order Items</li>
                             </ol>
                         </nav>
@@ -44,127 +44,50 @@
                                 <table class="table mb-0 table-borderless">
                                     <thead>
                                         <tr class="userDatatable-header">
+                                            <th><span class="userDatatable-title">ID</span></th>
                                             <th><span class="userDatatable-title">Order ID</span></th>
-                                            <th><span class="userDatatable-title">Product Name</span></th>
+                                            <th><span class="userDatatable-title">Product ID</span></th>
+                                            <th><span class="userDatatable-title">Price</span></th>
                                             <th><span class="userDatatable-title">Quantity</span></th>
-                                            <th><span class="userDatatable-title">Unit Price</span></th>
                                             <th><span class="userDatatable-title">Total Price</span></th>
                                             <th><span class="userDatatable-title">Actions</span></th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($orderitems as $orderitem)
                                         <tr class="userDatatable-row">
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <h6>#ORD-001</h6>
+                                                    <h6>{{$orderitem->id}}</h6>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <h6>Premium Headphones</h6>
+                                                    <h6>{{$orderitem->order_id}}</h6>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <span class="badge bg-light-primary">2</span>
+                                                    <h6>{{$orderitem->product_id}}</h6>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    $89.99
+                                                    {{$orderitem->price}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    $179.98
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
-                                                    <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="Edit">
-                                                            <i class="uil uil-edit"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="btn btn-danger btn-sm" title="Delete"
-                                                            onclick="return confirm('Are you sure?');">
-                                                            <i class="uil uil-trash"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr class="userDatatable-row">
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <h6>#ORD-001</h6>
+                                                    {{$orderitem->quantity}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <h6>USB Cable</h6>
+                                                    {{$orderitem->total}}
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="badge bg-light-primary">5</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    $12.99
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    $64.95
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
-                                                    <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="Edit">
-                                                            <i class="uil uil-edit"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="btn btn-danger btn-sm" title="Delete"
-                                                            onclick="return confirm('Are you sure?');">
-                                                            <i class="uil uil-trash"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr class="userDatatable-row">
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <h6>#ORD-002</h6>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <h6>Laptop Stand</h6>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="badge bg-light-primary">1</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    $45.50
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    $45.50
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
+                                                <ul class="d-flex  gap-2">
                                                     <li>
                                                         <a href="#" class="btn btn-primary btn-sm" title="Edit">
                                                             <i class="uil uil-edit"></i>
@@ -180,6 +103,7 @@
                                             </td>
                                         </tr>
                                     </tbody>
+                                    @endforeach
                                 </table>
                             </div>
                         </div>

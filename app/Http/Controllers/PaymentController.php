@@ -14,7 +14,8 @@ class PaymentController extends Controller
     {
         $title="All payments";
         $description="List of all payments";
-        return view('admin.payment.payment' , compact('title','description'));
+        $payments = Payment::all();
+        return view('admin.payment.payment' , compact('title','description','payments'));
     }
 
     /**

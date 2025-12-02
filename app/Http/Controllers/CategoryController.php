@@ -14,7 +14,8 @@ class CategoryController extends Controller
     {
         $title="All categories";
         $description="List of all categories";
-        return view('admin.categories.categories' , compact('title','description'));
+        $categories=Category::all();
+        return view('admin.categories.categories' , compact('title','description','categories'));
     }
 
     /**

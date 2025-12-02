@@ -10,8 +10,8 @@
                     <div class="breadcrumb-action justify-content-center flex-wrap">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><i class="uil uil-estate"></i>Admin</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Categories</li>
+                                <li class="breadcrumb-item"><a href="#"><i class="las la-home"></i>Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Categories Management</li>
                             </ol>
                         </nav>
                     </div>
@@ -47,85 +47,50 @@
                                 <table class="table mb-0 table-borderless">
                                     <thead>
                                         <tr class="userDatatable-header">
-                                            <th><span class="userDatatable-title">Category Name</span></th>
-                                            <th><span class="userDatatable-title">Parent Category</span></th>
-                                            <th><span class="userDatatable-title">Products Count</span></th>
+                                            <th><span class="userDatatable-title">ID</span></th>
+                                            <th><span class="userDatatable-title"> Name</span></th>
+                                            <th><span class="userDatatable-title">Slug</span></th>
+                                            <th><span class="userDatatable-title">Description</span></th>
                                             <th><span class="userDatatable-title">Status</span></th>
-                                            <th><span class="userDatatable-title">Created Date</span></th>
+                                            <th><span class="userDatatable-title">Image</span></th>
                                             <th><span class="userDatatable-title">Actions</span></th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($categories as $category)
                                         <tr class="userDatatable-row">
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <h6>Electronics</h6>
+                                                    <h6>{{$category->id}}</h6>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    -
+                                                    {{$category->name}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <span class="badge bg-light-info">145</span>
+                                                    {{$category->slug}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <span class="badge bg-light-success">Active</span>
+                                                    {{$category->description}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    20 Feb 2024
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
-                                                    <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="Edit">
-                                                            <i class="uil uil-edit"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="btn btn-danger btn-sm" title="Delete"
-                                                            onclick="return confirm('Are you sure?');">
-                                                            <i class="uil uil-trash"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr class="userDatatable-row">
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <h6>Smartphones</h6>
+                                                    {{$category->is_active ? 'Active' : 'Inactive'}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    Electronics
+                                                    {{$category->image}}
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="badge bg-light-info">52</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="badge bg-light-success">Active</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    15 Feb 2024
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
+                                                <ul class="d-flex  gap-2">
                                                     <li>
                                                         <a href="#" class="btn btn-primary btn-sm" title="Edit">
                                                             <i class="uil uil-edit"></i>
@@ -141,6 +106,7 @@
                                             </td>
                                         </tr>
                                     </tbody>
+                                    @endforeach
                                 </table>
                             </div>
                         </div>
