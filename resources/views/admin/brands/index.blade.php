@@ -24,9 +24,10 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h6 class="mb-0">Brands List</h6>
-                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addBrandModal">
-                            <i class="uil uil-plus"></i> Add Brand
-                        </button>
+                            <div class="action-btn">
+                            <a href="{{route('createbrands')}}" class="btn btn-primary">
+                            <i class="las la-plus m-2"></i>Create New Brand</a>
+                        </div>
                     </div>
                     <div class="card-body pt-0">
                         <div

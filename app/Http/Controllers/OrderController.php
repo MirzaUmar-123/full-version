@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\ProductController;
 use App\Models\Order;
 
 class OrderController extends Controller
@@ -25,7 +26,7 @@ class OrderController extends Controller
     {
         $title="All orders";
         $description="List of all orders";
-        return view('admin.order.create' , compact('title','description'));
+        return view('admin.order.create' , compact('title','description',));
     }
 
     /**

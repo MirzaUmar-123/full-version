@@ -10,7 +10,7 @@
                     <div class="breadcrumb-action justify-content-center flex-wrap">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><i class="uil uil-estate"></i>Home</a></li>
+                                <li class="breadcrumb-item"><a href="#"><i class="las la-home"></i>Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Orders</li>
                             </ol>
                         </nav>
@@ -23,8 +23,13 @@
             <div class="col-12 mb-30">
                 <div class="card">
                     <div class="card-header">
-                        <h6 class="mb-0">Orders</h6>
+                        <h6 class="mb-0">Manage All Orders</h6>
+                            <div class="action-btn">
+                            <a href="{{route('createorders')}}" class="btn btn-primary">
+                                <i class="las la-plus m-2"></i>Create New Order</a>
+                        </div>
                     </div>
+
                     <div class="card-body pt-0">
                         <div
                             class="support-form datatable-support-form d-flex justify-content-between align-items-center flex-wrap mb-30">

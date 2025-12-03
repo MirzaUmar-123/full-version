@@ -137,7 +137,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary px-30" type="submit">Add Product</button>
+                                <button class="btn btn-primary px-30" type="submit">Cancel</button><br>
+                                <button class="btn btn-primary m-5 px-30" type="submit">Save</button>
                             </form>
                         </div>
                     </div>

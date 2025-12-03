@@ -24,6 +24,10 @@
                 <div class="card">
                     <div class="card-header">
                         <h6 class="mb-0">Carts</h6>
+                            <div class="action-btn">
+                            <a href="{{route('createcarts')}}" class="btn btn-primary">
+                                <i class="las la-plus m-2"></i>Create New Cart</a>
+                        </div>
                     </div>
                     <div class="card-body pt-0">
                         <div

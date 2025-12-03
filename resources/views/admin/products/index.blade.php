@@ -30,8 +30,7 @@
                         </div>
                         <div class="action-btn">
                             <a href="{{route('createproducts')}}" class="btn btn-primary">
-                                Create New Product
-                            </a>
+                                <i class="las la-plus m-2"></i>Create New Product</a>
                         </div>
                     </div>
                     <div
