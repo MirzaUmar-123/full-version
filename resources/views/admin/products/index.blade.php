@@ -23,8 +23,7 @@
                 <div class="support-ticket-system support-ticket-system--search">
                     <div class="breadcrumb-main m-0 breadcrumb-main--table justify-content-sm-between ">
                         <div class=" d-flex flex-wrap justify-content-center breadcrumb-main__wrapper">
-                            <div
-                                class="d-flex align-items-center ticket__title justify-content-center me-md-25 mb-md-0 mb-20">
+                            <div class="d-flex align-items-center ticket__title justify-content-center me-md-25 mb-md-0 mb-20">
                                 <h4 class="text-capitalize fw-500 breadcrumb-title">Manage All Products</h4>
                             </div>
                         </div>
