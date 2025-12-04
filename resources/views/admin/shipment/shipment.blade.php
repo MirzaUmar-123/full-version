@@ -24,9 +24,10 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h6 class="mb-0">Shipment List</h6>
-                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addShipmentModal">
-                            <i class="uil uil-plus"></i> Add Shipment
-                        </button>
+                        <div class="action-btn">
+                            <a href="{{route('createshipments')}}" class="btn btn-primary">
+                                <i class="las la-plus m-2"></i>Add New Shipment</a>
+                        </div>
                     </div>
                     <div class="card-body pt-0">
                         <div
@@ -146,50 +147,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Add Shipment Modal -->
-    <div class="modal fade" id="addShipmentModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Add New Shipment</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form method="POST" action="#">
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label for="orderID" class="form-label">Order ID</label>
-                            <input type="text" class="form-control" id="orderID" placeholder="Enter order ID"
-                                required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="carrier" class="form-label">Carrier</label>
-                            <select class="form-control" id="carrier" required>
-                                <option value="">Select Carrier</option>
-                                <option value="fedex">FedEx</option>
-                                <option value="ups">UPS</option>
-                                <option value="dhl">DHL</option>
-                                <option value="usps">USPS</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="trackingNumber" class="form-label">Tracking Number</label>
-                            <input type="text" class="form-control" id="trackingNumber"
-                                placeholder="Enter tracking number" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="shippedDate" class="form-label">Shipped Date</label>
-                            <input type="date" class="form-control" id="shippedDate" required>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save Shipment</button>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
