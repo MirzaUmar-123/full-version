@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Category;
 use App\Models\Brand;
 
 class BrandController extends Controller
@@ -25,7 +26,8 @@ class BrandController extends Controller
     {
         $title="All brands";
         $description="List of all brand";
-        return view('admin.brands.create' , compact('title','description'));
+        $brands = Brand::all();
+        return view('admin.brands.create' , compact('title','description','brands',));
     }
 
     /**

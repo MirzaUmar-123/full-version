@@ -5,6 +5,8 @@ use App\Http\Controllers\CategoryController;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Brand;
+use App\Models\Category;
 
 class ProductController extends Controller
 {
@@ -26,8 +28,8 @@ class ProductController extends Controller
     {
         $title="Create Product";
         $description="Create a new product";
-        $categories = Product::all();
-        $brands = Product::all();
+        $categories = Category::all();
+        $brands = Brand::all();
         return view('admin.products.create' , compact('title','description','categories','brands'));
     }
 
