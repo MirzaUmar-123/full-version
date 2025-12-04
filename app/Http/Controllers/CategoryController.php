@@ -25,7 +25,8 @@ class CategoryController extends Controller
     {
         $title="Create category";
         $description="Create a new category";
-        return view('admin.categories.create' , compact('title','description'));
+        $categories=Category::all();
+        return view('admin.categories.create' , compact('title','description','categories'));
     }
 
     /**
