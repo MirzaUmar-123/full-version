@@ -24,9 +24,10 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h6 class="mb-0">Product Categories</h6>
-                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addCategoryModal">
-                            <i class="uil uil-plus"></i> Add Category
-                        </button>
+                        <div class="action-btn">
+                            <a href="{{route('createcategories')}}" class="btn btn-primary">
+                                <i class="las la-plus m-2"></i>Create New Category</a>
+                        </div>
                     </div>
                     <div class="card-body pt-0">
                         <div
@@ -125,43 +126,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Add Category Modal -->
-    <div class="modal fade" id="addCategoryModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Add New Category</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form method="POST" action="#">
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label for="categoryName" class="form-label">Category Name</label>
-                            <input type="text" class="form-control" id="categoryName"
-                                placeholder="Enter category name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="parentCategory" class="form-label">Parent Category</label>
-                            <select class="form-control" id="parentCategory">
-                                <option value="">None (Top Level)</option>
-                                <option value="1">Electronics</option>
-                                <option value="2">Fashion</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="categoryDesc" class="form-label">Description</label>
-                            <textarea class="form-control" id="categoryDesc" rows="3" placeholder="Enter category description"></textarea>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save Category</button>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
