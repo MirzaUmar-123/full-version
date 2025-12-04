@@ -68,10 +68,10 @@ class UserController extends Controller {
      *
      * @return \Illuminate\View\View
      */
-    public function add(){
+    public function create(){
         $title = "User Add";
         $description = "Some description for the page";
-        return view('pages.applications.user.add',compact('title','description'));
+        return view('admin.users.create',compact('title','description'));
     }
 
     /**
