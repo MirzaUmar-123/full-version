@@ -45,8 +45,7 @@
                                 </div>
                                 <div class="row mx-n15">
                                     <div class="col-md-6 mb-20 px-15">
-                                        <label for="category_id"
-                                            class="il-gray fs-14 fw-500 align-center mb-10">Category</label>
+                                        <label for="category_id" class="il-gray fs-14 fw-500 align-center mb-10">Category</label>
                                         <select name="category_id"
                                             class="custom-select form-control select-arrow-none ih-medium radius-xs b-light shadow-none color-light fs-14"
                                             id="category_id" required>
