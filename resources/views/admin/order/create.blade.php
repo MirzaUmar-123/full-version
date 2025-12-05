@@ -64,7 +64,10 @@
                                     <option value="cancelled">Cancelled</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary">Save Order</button>
+                            <div class="d-flex  gap-2">
+                                <button class="btn btn-secondary">Cancel</button>
+                                <button class="btn btn-primary">Save </button>
+                            </div>
                         </form>
                     </div>
                 </div>
