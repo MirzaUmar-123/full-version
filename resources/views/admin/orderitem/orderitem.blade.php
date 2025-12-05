@@ -11,7 +11,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#"><i class="las la-home"></i>Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Order Items</li>
+                                <li class="breadcrumb-item active" aria-current="page">Order Items Management</li>
                             </ol>
                         </nav>
                     </div>
@@ -24,6 +24,10 @@
                 <div class="card">
                     <div class="card-header">
                         <h6 class="mb-0">Order Items List</h6>
+                    <div class="action-btn">
+                            <a href="{{route('createorderitems')}}" class="btn btn-primary">
+                                <i class="las la-plus m-2"></i>Add New Order Items</a>
+                        </div>
                     </div>
                     <div class="card-body pt-0">
                         <div
