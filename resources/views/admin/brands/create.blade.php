@@ -57,8 +57,10 @@
                                             placeholder="Enter brand description" rows="4">{{ old('description') }}</textarea>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary px-30" type="submit">Cancel</button><br>
-                                <button class="btn btn-primary m-5 px-30" type="submit">Save</button>
+                                <div class="d-flex  gap-2">
+                                <button class="btn btn-secondary">Cancel</button>
+                                <button class="btn btn-primary">Save </button>
+                            </div>
                             </form>
                         </div>
                     </div>
