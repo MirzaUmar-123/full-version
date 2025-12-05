@@ -11,7 +11,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#"><i class="las la-home"></i>Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Product Management</li>
+                                <li class="breadcrumb-item active" aria-current="page">Products Management</li>
                             </ol>
                         </nav>
                     </div>
