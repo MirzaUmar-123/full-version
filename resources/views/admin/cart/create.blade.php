@@ -39,7 +39,10 @@
                                 <label for="quantity">Quantity</label>
                                 <input type="number" class="form-control" id="quantity" name="quantity" required>
                             </div>
-                            <button type="submit" class="btn btn-primary">Save</button>
+                            <div class="d-flex  gap-2">
+                                <button class="btn btn-secondary">Cancel</button>
+                                <button class="btn btn-primary">Save </button>
+                            </div>
                         </form>
                     </div>
                 </div>
