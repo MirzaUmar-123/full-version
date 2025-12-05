@@ -23,7 +23,7 @@
             <div class="col-12 mb-30">
                 <div class="card">
                     <div class="card-header">
-                        <h6 class="mb-0">Carts</h6>
+                        <h6 class="mb-0">Cart List</h6>
                             <div class="action-btn">
                             <a href="{{route('createcarts')}}" class="btn btn-primary">
                                 <i class="las la-plus m-2"></i>Create New Cart</a>
