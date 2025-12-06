@@ -11,7 +11,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#"><i class="uil uil-estate"></i>Admin</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Coupons</li>
+                                <li class="breadcrumb-item active" aria-current="page">Coupons Management</li>
                             </ol>
                         </nav>
                     </div>
@@ -23,10 +23,11 @@
             <div class="col-12 mb-30">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                        <h6 class="mb-0">Discount Coupons</h6>
-                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addCouponModal">
-                            <i class="uil uil-plus"></i> Add Coupon
-                        </button>
+                        <h6 class="mb-0">Coupons List</h6>
+                        <div class="action-btn">
+                            <a href="{{route('createcoupons')}}" class="btn btn-primary">
+                                <i class="las la-plus m-2"></i>Create New Coupon</a>
+                        </div>
                     </div>
                     <div class="card-body pt-0">
                         <div
@@ -57,92 +58,64 @@
                                 <table class="table mb-0 table-borderless">
                                     <thead>
                                         <tr class="userDatatable-header">
-                                            <th><span class="userDatatable-title">Coupon Code</span></th>
-                                            <th><span class="userDatatable-title">Discount</span></th>
-                                            <th><span class="userDatatable-title">Valid From</span></th>
-                                            <th><span class="userDatatable-title">Valid To</span></th>
-                                            <th><span class="userDatatable-title">Usage Count</span></th>
-                                            <th><span class="userDatatable-title">Status</span></th>
+                                            <th><span class="userDatatable-title">ID</span></th>
+                                            <th><span class="userDatatable-title">Created By</span></th>
+                                            <th><span class="userDatatable-title">Code</span></th>
+                                            <th><span class="userDatatable-title">Dicount Amount</span></th>
+                                            <th><span class="userDatatable-title">Description</span></th>
+                                            <th><span class="userDatatable-title">Expiry Date</span></th>
+                                            <th><span class="userDatatable-title">Usage Limit</span></th>
+                                            <th><span class="userDatatable-title">Min Order Amount</span></th>
+                                            <th><span class="userDatatable-title">Is Active</span></th>
                                             <th><span class="userDatatable-title">Actions</span></th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($coupons as $coupon)
                                         <tr class="userDatatable-row">
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <h6>SAVE20</h6>
+                                                    <h6>{{$coupon->id}}</h6>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    20% OFF
+                                                    {{$coupon->created_by}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    01 Jan 2024
+                                                    {{$coupon->code}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    31 Dec 2024
+                                                    {{$coupon->discount_amount}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <span class="badge bg-light-info">245</span>
+                                                    {{$coupon->description}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    <span class="badge bg-light-success">Active</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center gap-2">
-                                                    <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="Edit">
-                                                            <i class="uil uil-edit"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="btn btn-danger btn-sm" title="Delete"
-                                                            onclick="return confirm('Are you sure?');">
-                                                            <i class="uil uil-trash"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr class="userDatatable-row">
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <h6>WINTER15</h6>
+                                                    {{$coupon->expiry_date}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    15% OFF
+                                                    {{$coupon->usage_limit}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    15 Dec 2023
+                                                    {{$coupon->min_order_amount}}
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    31 Jan 2024
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="badge bg-light-info">512</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="userDatatable-content">
-                                                    <span class="badge bg-light-warning">Expired</span>
+                                                    {{$coupon->is_active ? 'Active' : 'Inactive'}}
                                                 </div>
                                             </td>
                                             <td>
@@ -162,6 +135,7 @@
                                             </td>
                                         </tr>
                                     </tbody>
+                                    @endforeach
                                 </table>
                             </div>
                         </div>
@@ -180,54 +154,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Add Coupon Modal -->
-    <div class="modal fade" id="addCouponModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Add New Coupon</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form method="POST" action="#">
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label for="couponCode" class="form-label">Coupon Code</label>
-                            <input type="text" class="form-control" id="couponCode" placeholder="e.g., SAVE20"
-                                required>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="discountType" class="form-label">Discount Type</label>
-                                <select class="form-control" id="discountType" required>
-                                    <option value="percentage">Percentage (%)</option>
-                                    <option value="fixed">Fixed Amount ($)</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="discountValue" class="form-label">Discount Value</label>
-                                <input type="number" class="form-control" id="discountValue" placeholder="20" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="validFrom" class="form-label">Valid From</label>
-                                <input type="date" class="form-control" id="validFrom" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="validTo" class="form-label">Valid To</label>
-                                <input type="date" class="form-control" id="validTo" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save Coupon</button>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
