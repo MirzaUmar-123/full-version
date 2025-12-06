@@ -49,7 +49,7 @@
                             </div>
                             <div class="d-flex  gap-2">
                                     <button class="btn btn-secondary">Cancel</button>
-                                    <button class="btn btn-primary">Save Order Item</button>
+                                    <button class="btn btn-primary">Save </button>
                             </div>
                         </form>
                     </div>
