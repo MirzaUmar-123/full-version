@@ -26,7 +26,7 @@
                         <h6 class="mb-0">Shipment List</h6>
                         <div class="action-btn">
                             <a href="{{route('createshipments')}}" class="btn btn-primary">
-                                <i class="las la-plus m-2"></i>Add New Shipment</a>
+                                <i class="las la-plus m-2"></i>Create New Shipment</a>
                         </div>
                     </div>
                     <div class="card-body pt-0">
