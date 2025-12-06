@@ -26,7 +26,7 @@
                         <h6 class="mb-0">Payment List</h6>
                         <div class="action-btn">
                             <a href="{{route('createpayments')}}" class="btn btn-primary">
-                                <i class="las la-plus m-2"></i>Add New Payments</a>
+                                <i class="las la-plus m-2"></i>Create New Payments</a>
                         </div>
                     </div>
                     <div class="card-body pt-0">
