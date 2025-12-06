@@ -26,7 +26,7 @@
                         <h6 class="mb-0">Order Items List</h6>
                     <div class="action-btn">
                             <a href="{{route('createorderitems')}}" class="btn btn-primary">
-                                <i class="las la-plus m-2"></i>Add New Order Items</a>
+                                <i class="las la-plus m-2"></i>Create New Order Items</a>
                         </div>
                     </div>
                     <div class="card-body pt-0">
