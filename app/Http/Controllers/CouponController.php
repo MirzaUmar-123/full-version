@@ -14,7 +14,8 @@ class CouponController extends Controller
     {
         $title="All coupons";
         $description="List of all coupons";
-        return view('admin.coupon.coupon' , compact('title','description'));
+        $coupons=Coupon::all();
+        return view('admin.coupon.coupon' , compact('title','description','coupons'));
     }
 
     /**
@@ -22,7 +23,9 @@ class CouponController extends Controller
      */
     public function create()
     {
-        //
+        $title="All coupons";
+        $description="List of all coupons";
+        return view('admin.coupon.create' , compact('title','description'));
     }
 
     /**
