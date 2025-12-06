@@ -552,6 +552,12 @@
             </a>
         </li>
 
+        <li>
+            <a href="{{ route ('showallcoupons')}}">
+                <i class="nav-icon la la-comment-dollar"></i>
+                Coupons
+            </a>
+        </li>
 
         <li>
             <a href="{{ route ('showallorderitems')}}">
