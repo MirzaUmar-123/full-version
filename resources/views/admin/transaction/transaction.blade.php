@@ -24,6 +24,10 @@
                 <div class="card">
                     <div class="card-header">
                         <h6 class="mb-0">Transaction History</h6>
+                        <div class="action-btn">
+                            <a href="{{route('createtransactions')}}" class="btn btn-primary">
+                                <i class="las la-plus m-2"></i>Create New Transaction</a>
+                        </div>
                     </div>
                     <div class="card-body pt-0">
                         <div
