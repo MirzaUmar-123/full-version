@@ -98,8 +98,8 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" class="btn btn-danger btn-sm" title="Delete"
-                                                            onclick="return confirm('Are you sure?');">
+                                                        <a href="{{ route('deletecategories', ['id' => $category->id]) }}" class="btn btn-info btn-sm" title="delete"
+                                                            onclick=" return confirm('Are you sure you want to delete this category?'); ">
                                                             <i class="uil uil-trash"></i>
                                                         </a>
                                                     </li>
