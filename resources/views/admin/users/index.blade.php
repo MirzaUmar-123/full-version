@@ -114,8 +114,8 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" class="btn btn-danger btn-sm" title="Delete"
-                                                            onclick="return confirm('Are you sure?');">
+                                                        <a href="{{ route('deleteusers', ['id' => $user->id]) }}" class="btn btn-info btn-sm" title="delete"
+                                                            onclick=" return confirm('Are you sure you want to delete this user?'); ">
                                                             <i class="uil uil-trash"></i>
                                                         </a>
                                                     </li>
