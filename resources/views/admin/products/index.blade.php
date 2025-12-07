@@ -173,8 +173,8 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="{{ route('deleteproducts', ['slug' => $product->slug]) }}"
-                                                            class="remove">
+                                                        <a href="{{ route('deleteproducts', ['slug' => $product->slug]) }}" class="remove"
+                                                            onclick="return confirm('Are you sure to delete?');">
                                                             <i class="uil uil-trash-alt"></i>
                                                         </a>
                                                     </li>
