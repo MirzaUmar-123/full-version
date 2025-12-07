@@ -84,4 +84,22 @@ class UserController extends Controller {
         $description = "Some description for the page";
         return view('pages.applications.user.data_table',compact('title','description'));
     }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function destroy(string $id)
+    {
+        $result = User::where('id', $id)->firstorfail();
+        if ($result) {
+            $result->delete();
+            return response()->json(['message' => 'User deleted successfully.'], 200);
+        }
+        else {
+            return response()->json(['message' => 'User not found.'], 404);
+    }
+    }
 }
