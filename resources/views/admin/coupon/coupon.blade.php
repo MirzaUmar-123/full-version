@@ -80,7 +80,7 @@
                                             </td>
                                             <td>
                                                 <div class="userDatatable-content">
-                                                    {{$coupon->created_by}}
+                                                    Mirza Umar Islam
                                                 </div>
                                             </td>
                                             <td>
@@ -126,8 +126,8 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" class="btn btn-danger btn-sm" title="Delete"
-                                                            onclick="return confirm('Are you sure?');">
+                                                        <a href="{{ route('deletecoupons', ['id' => $coupon->id]) }}" class="btn btn-info btn-sm" title="delete"
+                                                            onclick=" return confirm('Are you sure you want to delete this coupon?'); ">
                                                             <i class="uil uil-trash"></i>
                                                         </a>
                                                     </li>
