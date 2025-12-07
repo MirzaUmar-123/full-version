@@ -123,7 +123,8 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" class="btn btn-info btn-sm" title="Edit">
+                                                        <a href="{{ route('deleteorders', ['id' => $order->id]) }}" class="btn btn-info btn-sm" title="Edit"
+                                                            onclick=" return confirm('Are you sure you want to delete this order?'); ">
                                                             <i class="uil uil-edit"></i>
                                                         </a>
                                                     </li>
