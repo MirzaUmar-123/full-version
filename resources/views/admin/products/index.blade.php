@@ -161,21 +161,21 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <ul class="orderDatatable_actions mb-0 d-flex flex-wrap">
+                                                <ul class="d-flex justify-content-center gap-2">
                                                     <li>
-                                                        <a href="#" class="view">
-                                                            <i class="uil uil-setting"></i>
+                                                        <a href="#" class="btn btn-primary btn-sm" title="View">
+                                                            <i class="uil uil-eye"></i>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" class="edit">
+                                                        <a href="#" class="btn btn-primary btn-sm" title="Edit">
                                                             <i class="uil uil-edit"></i>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="{{ route('deleteproducts', ['slug' => $product->slug]) }}" class="remove"
-                                                            onclick="return confirm('Are you sure to delete?');">
-                                                            <i class="uil uil-trash-alt"></i>
+                                                        <a href="{{ route('deleteproducts', ['slug' => $product->slug]) }}" class="btn btn-info btn-sm" title="delete"
+                                                            onclick=" return confirm('Are you sure you want to delete this product?'); ">
+                                                            <i class="uil uil-trash"></i>
                                                         </a>
                                                     </li>
                                                 </ul>
