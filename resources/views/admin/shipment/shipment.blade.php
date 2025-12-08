@@ -114,15 +114,21 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <ul class="d-flex justify-content-center gap-2">
+                                                <ul class="d-flex  gap-2">
                                                     <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="Track">
-                                                            <i class="uil uil-map-marker"></i>
+                                                        <a href="#" class="btn btn-primary btn-sm" title="View">
+                                                            <i class="uil uil-eye"></i>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" class="btn btn-info btn-sm" title="Edit">
+                                                        <a href="#" class="btn btn-primary btn-sm" title="Edit">
                                                             <i class="uil uil-edit"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{route('deleteshipments', ['id'=>$shipment->id])}}" class="btn btn-danger btn-sm" title="Delete"
+                                                            onclick="return confirm('Are you sure to delete this shipment?');">
+                                                            <i class="uil uil-trash"></i>
                                                         </a>
                                                     </li>
                                                 </ul>
