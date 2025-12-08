@@ -49,6 +49,7 @@ Route::post('/products/store', [ProductController::class, 'store'])->name('store
 Route::put('/products/update', [ProductController::class, 'update'])->name('updateproducts');
 Route::get('/products/delete/${slug}', [ProductController::class, 'destroy'])->name('deleteproducts');
 Route::get('/products/create', [ProductController::class, 'create'])->name('createproducts');
+Route::get('/products/edit/{slug}', [ProductController::class, 'edit'])->name('editproducts');
 
 
 Route::get('/brand', [BrandController::class, 'index'])->name('showallbrands');
@@ -56,6 +57,8 @@ Route::post('/brand/store', [BrandController::class, 'store'])->name('storebrand
 Route::put('/brand/update', [BrandController::class, 'update'])->name('updatebrands');
 Route::get('/brands/delete/${id}', [BrandController::class, 'destroy'])->name('deletebrands');
 Route::get('/brands/create', [BrandController::class, 'create'])->name('createbrands');
+Route::get('/brands/edit', [BrandController::class, 'edit'])->name('editbrands');
+
 
 Route::get('/cart', [CartController::class, 'index'])->name('showallcarts');
 Route::post('/cart/store', [CartController::class, 'store'])->name('storecarts');
