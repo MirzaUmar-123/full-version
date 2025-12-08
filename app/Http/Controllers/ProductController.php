@@ -64,13 +64,12 @@ class ProductController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(string $slug)
-    {
-        $product = Product::where('slug', $slug)->firstorfail();
-        if ($product) {
-
+        {
+            $title="Edit Product";
+            $description="Edit product";
+            $product = Product::where('slug', $slug)->firstOrFail();
+            return view('admin.products.edit', compact('title','description','product'));
         }
-        return response()->json('Product not found', 200);
-    }
 
     /**
      * Update the specified resource in storage.
