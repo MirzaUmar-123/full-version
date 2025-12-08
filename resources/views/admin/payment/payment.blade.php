@@ -108,10 +108,21 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <ul class="d-flex justify-content-center gap-2">
+                                                <ul class="d-flex  gap-2">
                                                     <li>
                                                         <a href="#" class="btn btn-primary btn-sm" title="View">
                                                             <i class="uil uil-eye"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="btn btn-primary btn-sm" title="Edit">
+                                                            <i class="uil uil-edit"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{route('deletepayments', ['id'=>$payment->id])}}" class="btn btn-danger btn-sm" title="Delete"
+                                                            onclick="return confirm('Are you sure to delete this payment?');">
+                                                            <i class="uil uil-trash"></i>
                                                         </a>
                                                     </li>
                                                 </ul>
