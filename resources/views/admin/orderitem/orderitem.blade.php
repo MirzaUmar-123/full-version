@@ -93,13 +93,18 @@
                                             <td>
                                                 <ul class="d-flex  gap-2">
                                                     <li>
+                                                        <a href="#" class="btn btn-primary btn-sm" title="View">
+                                                            <i class="uil uil-eye"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
                                                         <a href="#" class="btn btn-primary btn-sm" title="Edit">
                                                             <i class="uil uil-edit"></i>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" class="btn btn-danger btn-sm" title="Delete"
-                                                            onclick="return confirm('Are you sure?');">
+                                                        <a href="{{route('deleteorderitems', ['id'=>$orderitem->id])}}" class="btn btn-danger btn-sm" title="Delete"
+                                                            onclick="return confirm('Are you sure to delete this orderitem?');">
                                                             <i class="uil uil-trash"></i>
                                                         </a>
                                                     </li>
