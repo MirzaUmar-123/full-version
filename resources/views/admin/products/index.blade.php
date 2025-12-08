@@ -168,7 +168,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="Edit">
+                                                        <a href="{{route('editproducts',['slug'=>$product->slug])}}" class="btn btn-primary btn-sm" title="Edit">
                                                             <i class="uil uil-edit"></i>
                                                         </a>
                                                     </li>
