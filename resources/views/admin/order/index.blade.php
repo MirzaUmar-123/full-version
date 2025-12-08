@@ -123,9 +123,14 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="{{ route('deleteorders', ['id' => $order->id]) }}" class="btn btn-info btn-sm" title="Edit"
-                                                            onclick=" return confirm('Are you sure you want to delete this order?'); ">
+                                                        <a href="#" class="btn btn-primary btn-sm" title="Edit">
                                                             <i class="uil uil-edit"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ route('deleteorders', ['id' => $order->id]) }}" class="btn btn-info btn-sm" title="delete"
+                                                            onclick=" return confirm('Are you sure you want to delete this order?'); ">
+                                                            <i class="uil uil-trash"></i>
                                                         </a>
                                                     </li>
                                                 </ul>
