@@ -121,6 +121,11 @@
                                             <td>
                                                 <ul class="d-flex justify-content-center gap-2">
                                                     <li>
+                                                        <a href="#" class="btn btn-primary btn-sm" title="View">
+                                                            <i class="uil uil-eye"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
                                                         <a href="#" class="btn btn-primary btn-sm" title="Edit">
                                                             <i class="uil uil-edit"></i>
                                                         </a>
