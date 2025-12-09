@@ -58,7 +58,10 @@ class OrderController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $title="All orders";
+        $description="List of all orders";
+        $order = Order::findOrFail($id);
+        return view('admin.order.edit', compact('title','description','order'));
     }
 
     /**
