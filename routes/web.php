@@ -86,6 +86,7 @@ Route::post('/order/store', [OrderController::class, 'store'])->name('storeorder
 Route::put('/order/update', [OrderController::class, 'update'])->name('updateorders');
 Route::get('/order/delete/${id}', [OrderController::class, 'destroy'])->name('deleteorders');
 Route::get('/order/create', [OrderController::class, 'create'])->name('createorders');
+Route::get('/order/edit/{id}', [OrderController::class, 'edit'])->name('editorders');
 
 
 Route::get('/orderitem', [OrderItemController::class, 'index'])->name('showallorderitems');
