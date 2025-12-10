@@ -54,7 +54,10 @@ class BrandController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $title="Edit brand";
+        $description="Edit brand details";
+        $brand = Brand::where('id', $id)->firstorfail();
+        return view('admin.brands.edit' , compact('title','description','brand'));
     }
 
     /**
