@@ -57,7 +57,7 @@
                                             placeholder="Enter brand description" rows="4">{{ old('description') }}</textarea>
                                     </div>
                                 </div>
-                                <div class="d-flex  gap-2">
+                            <div class="d-flex  gap-2">
                                 <button class="btn btn-secondary">Cancel</button>
                                 <button class="btn btn-primary">Save </button>
                             </div>
@@ -66,7 +66,6 @@
                     </div>
                     <!-- ends: .card -->
                 </div>
-
             </div>
         </div>
     </div>
