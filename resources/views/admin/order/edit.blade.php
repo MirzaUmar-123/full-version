@@ -29,24 +29,27 @@
                 <input type="text" class="form-control" id="ordernumber" name="ordernumber" value="{{ old('order_number', $order->order_number) }}" required>
             </div>
             <div class="form-group">
-                <label for="status">Order Status</label>
-                <input type="text" class="form-control" id="status" name="status" value="{{ old('status', $order->status) }}" required>
-            </div>
+                                <label for="status">Status</label>
+                                <select class="form-control" id="status" name="status" required>
+                                    <option value="pending">Select Status</option>
+                                    <option value="pending">Pending</option>
+                                    <option value="confirmed">Confirmed</option>
+                                    <option value="cancelled">Cancelled</option>
+                                </select>
+                            </div>
             <div class="form-group">
                 <label for="totalamount">Total Amount</label>
                 <input type="number" class="form-control" id="totalamount" name="totalamount" value="{{ old('total_amount', $order->total_amount) }}" required>
             </div>
             <div class="form-group">
-                <label for="paymentmethod">Payment Method</label>
-                <select name="" id="">
-                        <option value="">All Status</option>
-                        <option value="pending">Pending</option>
-                        <option value="confirmed">Confirmed</option>
-                        <option value="shipped">Shipped</option>
-                        <option value="delivered">Delivered</option>
-                        <option value="cancelled">Cancelled</option>
-                </select>
-            </div>
+                                <label for="paymentmethod">Payment Method</label>
+                                <select class="form-control" id="paymentmethod" name="paymentmethod" required>
+                                    <option value="selectpaymentmethod">Select payment Mathod</option>
+                                    <option value="paypal">Paypal</option>
+                                    <option value="creditcard">Credit Card</option>
+                                    <option value="debitcard">Debit Card</option>
+                                </select>
+                            </div>
             <div class="form-group">
                 <label for="shippingaddress">Shipping Address</label>
                 <input type="text" class="form-control" id="shippingaddress" name="shippingaddress" value="{{ old('shipping_address', $order->shipping_address) }}" required>
