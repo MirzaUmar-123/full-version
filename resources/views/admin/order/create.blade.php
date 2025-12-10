@@ -48,6 +48,15 @@
                                 <input type="number" class="form-control" id="amount" name="amount" required>
                             </div>
                             <div class="form-group">
+                                <label for="paymentmethod">Payment Method</label>
+                                <select class="form-control" id="paymentmethod" name="paymentmethod" required>
+                                    <option value="selectpaymentmethod">Select payment Mathod</option>
+                                    <option value="paypal">Paypal</option>
+                                    <option value="creditcard">Credit Card</option>
+                                    <option value="debitcard">Debit Card</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label for="quantity">Shipping Adress</label>
                                 <input type="text" class="form-control" id="adress" name="adress" required>
                             </div>
@@ -58,7 +67,7 @@
                             <div class="form-group">
                                 <label for="status">Status</label>
                                 <select class="form-control" id="status" name="status" required>
-                                    <option value="pending">Select Status</option>
+                                    <option value="selectstatus">Select Status</option>
                                     <option value="pending">Pending</option>
                                     <option value="confirmed">Confirmed</option>
                                     <option value="cancelled">Cancelled</option>
