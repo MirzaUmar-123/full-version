@@ -53,7 +53,10 @@ class CartController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $title="Edit carts";
+        $description="Edit cart details";
+        $cart=Cart::where('id', $id)->firstorfail();
+        return view('admin.cart.edit' , compact('title','description','cart'));
     }
 
     /**
