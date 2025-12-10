@@ -57,7 +57,7 @@ Route::post('/brand/store', [BrandController::class, 'store'])->name('storebrand
 Route::put('/brand/update', [BrandController::class, 'update'])->name('updatebrands');
 Route::get('/brands/delete/${id}', [BrandController::class, 'destroy'])->name('deletebrands');
 Route::get('/brands/create', [BrandController::class, 'create'])->name('createbrands');
-Route::get('/brands/edit', [BrandController::class, 'edit'])->name('editbrands');
+Route::get('/brands/edit/{id}', [BrandController::class, 'edit'])->name('editbrands');
 
 
 Route::get('/cart', [CartController::class, 'index'])->name('showallcarts');
