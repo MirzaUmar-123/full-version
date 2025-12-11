@@ -109,7 +109,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" class="btn btn-info btn-sm" title="Edit">
+                                                        <a href="{{route('editusers',['id'=>$user->id])}}" class="btn btn-info btn-sm" title="Edit">
                                                             <i class="uil uil-edit"></i>
                                                         </a>
                                                     </li>
