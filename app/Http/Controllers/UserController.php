@@ -102,4 +102,11 @@ class UserController extends Controller {
             return response()->json(['message' => 'User not found.'], 404);
     }
     }
+
+    public function edit(string $id){
+        $title = "User Edit";
+        $description = "Some description for the page";
+        $user = User::where('id', $id)->firstorfail();
+        return view('admin.users.edit',compact('title','description','user'));
+    }
 }
