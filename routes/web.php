@@ -73,6 +73,7 @@ Route::post('/category/store', [CategoryController::class, 'store'])->name('stor
 Route::put('/category/update', [CategoryController::class, 'update'])->name('updatecategories');
 Route::get('/category/delete/${id}', [CategoryController::class, 'destroy'])->name('deletecategories');
 Route::get('/category/create', [CategoryController::class, 'create'])->name('createcategories');
+Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('editcategories');
 
 
 Route::get('/coupon', [CouponController::class, 'index'])->name('showallcoupons');
@@ -109,6 +110,7 @@ Route::post('/user/store', [UserController::class, 'store'])->name('storeusers')
 Route::put('/user/update', [UserController::class, 'update'])->name('updateusers');
 Route::get('/user/delete/${id}', [UserController::class, 'destroy'])->name('deleteusers');
 Route::get('/user/create', [UserController::class, 'create'])->name('createusers');
+Route::get('/user/edit/{id}', [UserController::class, 'edit'])->name('editusers');
 
 
 Route::get('/wishlist', [WishlistController::class, 'index'])->name('showallwishlists');
