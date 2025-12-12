@@ -56,7 +56,10 @@ class ShipmentController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $title="Edit Shipment";
+        $description="Edit shipment details";
+        $shipment = Shipment::where('id', $id)->firstorfail();
+        return view('admin.shipment.edit' , compact('title','description', 'shipment'));
     }
 
     /**
