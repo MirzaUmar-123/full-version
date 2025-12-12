@@ -57,7 +57,10 @@ class PaymentController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $title="Edit payment";
+        $description="Edit the payment details";
+        $payment = Payment::where('id', $id)->firstorfail();
+        return view('admin.payment.edit' , compact('title','description','payment'));
     }
 
     /**
