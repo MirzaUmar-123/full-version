@@ -57,7 +57,10 @@ class CouponController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $title="Edit coupon";
+        $description="Edit the coupon details";
+        $coupon=Coupon::where('id',$id)->firstorfail();
+        return view('admin.coupon.edit' , compact('title','description','coupon'));
     }
 
     /**
