@@ -57,7 +57,10 @@ class TransactionController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $title="Edit Transaction";
+        $description="Edit transaction details";
+        $transaction = Transaction::where('id', $id)->firstorfail();
+        return view('admin.transaction.edit' , compact('title','description', 'transaction'));
     }
 
     /**
