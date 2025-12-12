@@ -126,7 +126,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="Edit">
+                                                        <a href="{{route('editcoupons',['id'=>$coupon->id])}}" class="btn btn-primary btn-sm" title="Edit">
                                                             <i class="uil uil-edit"></i>
                                                         </a>
                                                     </li>
