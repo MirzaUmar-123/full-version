@@ -52,7 +52,10 @@ class WishlistController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $title="Edit Wishlist";
+        $description="Edit wishlist details";
+        $wishlist = Wishlist::where('id', $id)->firstorfail();
+        return view('admin.wishlist.edit' , compact('title','description', 'wishlist'));
     }
 
     /**
