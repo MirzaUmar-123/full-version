@@ -51,8 +51,7 @@
                         <div class="form-check">
                             <input type="radio" class="form-check-input" name="is_active" id="active" value="1"
                                 {{ old('is_active', $category->is_active) == 1 ? 'checked' : '' }}>
-                            <label class="form-check-label" for="active">Active</label>
-                        </div>
+                            <label class="form-check-label" for="active">Active</label></div>
                         <div class="form-check">
                             <input type="radio" class="form-check-input" name="is_active" id="notActive" value="0"
                                 {{ old('is_active', $category->is_active) == 0 ? 'checked' : '' }}>
