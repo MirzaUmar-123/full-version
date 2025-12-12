@@ -57,7 +57,10 @@ class ReviewController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $title="Edit Review";
+        $description="Edit review details";
+        $review = Review::where('id', $id)->firstorfail();
+        return view('admin.review.edit' , compact('title','description', 'review'));
     }
 
     /**
