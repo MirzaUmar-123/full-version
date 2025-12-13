@@ -60,9 +60,9 @@
                             <div class="mb-3">
                                 <label for="status" class="form-label">Satus</label>
                                 <select class="form-control" id="status" name="status" required>
-                                    <option value="5">Select Status</option>
-                                    <option value="4">Proved</option>
-                                    <option value="3">Not Proved</option>
+                                    <option value="selectstatus">Select Status</option>
+                                    <option value="proved">Proved</option>
+                                    <option value="notproved">Not Proved</option>
                                 </select>
                             </div>
                             <div class="mb-3">
