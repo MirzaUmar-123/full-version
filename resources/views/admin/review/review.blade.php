@@ -18,7 +18,6 @@
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-12 mb-30">
                 <div class="card">
@@ -128,7 +127,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" class="btn btn-primary btn-sm" title="Edit">
+                                                        <a href="{{route('editreviews', ['id'=>$review->id])}}" class="btn btn-primary btn-sm" title="Edit">
                                                             <i class="uil uil-edit"></i>
                                                         </a>
                                                     </li>
