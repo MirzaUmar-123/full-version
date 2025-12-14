@@ -32,23 +32,19 @@
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" value="{{old('email',$user->email)}}"
-                                required>
+                            <input type="email" class="form-control" id="email" value="{{old('email',$user->email)}}" required>
                         </div>
                         <div class="mb-3">
                             <label for="email_verified_at" class="form-label">Email Verified At</label>
-                            <input type="datetime-local" class="form-control" id="email_verified_at" value="{{old('email_verified_at',$user->email_verified_at)}}"
-                                required>
+                            <input type="datetime-local" class="form-control" id="email_verified_at" value="{{old('email_verified_at',$user->email_verified_at)}}" required>
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" value="{{old('password',$user->password)}}"
-                                required>
+                            <input type="password" class="form-control" id="password" value="{{old('password',$user->password)}}" required>
                         </div>
                         <div class="mb-3">
                             <label for="remembertoken" class="form-label">Remember Token</label>
-                            <input type="text" class="form-control" id="remembertoken" value="{{old('remember_token',$user->remember_token)}}"
-                                required>
+                            <input type="text" class="form-control" id="remembertoken" value="{{old('remember_token',$user->remember_token)}}" required>
                         </div>
                     </div>
                     <div class="modal-footer justify-content-start">
