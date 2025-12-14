@@ -39,11 +39,12 @@
                     </div>
                     <div class="mb-3">
                         <label for="slug" class="form-label">Slug</label>
-                        <input type="text" class="form-control" id="slug" value="{{ old('slug', $category->slug) }}" required>
+                        <input type="text" class="form-control" id="slug" value="{{ old('slug', $category->slug) }}"
+                            placeholder="Enter category slug" required>
                     </div>
                     <div class="mb-3">
                         <label for="categoryDesc" class="form-label">Description</label>
-                        <textarea class="form-control" id="categoryDesc" value="{{ old('description', $category->description) }}"></textarea>
+                        <textarea class="form-control" id="categoryDesc" rows="3" placeholder="Enter category description">{{ old('description', $category->description) }}</textarea>
                     </div>
                     <div class="mb-3">
                         <label>Status:</label>
