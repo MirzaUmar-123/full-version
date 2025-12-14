@@ -28,13 +28,11 @@
                         <form>
                             <div class="form-group">
                                 <label for="userid">User ID</label>
-                                <input type="number" class="form-control" id="userid" placeholder="Enter user ID"
-                                    value="{{ $payment->user_id }}">
+                                <input type="number" class="form-control" id="userid" value="{{ $payment->user_id }}">
                             </div>
                             <div class="form-group">
                                 <label for="orderid">Order ID</label>
-                                <input type="number" class="form-control" id="orderid" placeholder="Enter order ID"
-                                    value="{{ $payment->order_id }}">
+                                <input type="number" class="form-control" id="orderid" value="{{ $payment->order_id }}">
                             </div>
                             <div class="form-group">
                                 <label for="paymentmethod">Payment Method</label>
@@ -54,13 +52,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="transactionid">Transaction ID</label>
-                                <input type="text" class="form-control" id="transactionid"
-                                    placeholder="Enter Transaction ID" value="{{ $payment->transaction_id }}">
+                                <input type="text" class="form-control" id="transactionid" value="{{ $payment->transaction_id }}">
                             </div>
                             <div class="form-group ">
                                 <label for="amount">Amount</label>
-                                <input type="number" class="form-control" id="amount" placeholder="Enter amount"
-                                    value="{{ $payment->amount }}">
+                                <input type="number" class="form-control" id="amount" value="{{ $payment->amount }}">
                             </div>
                             <div class="form-group">
                                 <label for="paymentstatus">Payment Status</label>
